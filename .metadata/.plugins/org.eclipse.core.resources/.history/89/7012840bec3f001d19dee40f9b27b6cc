@@ -1,0 +1,22 @@
+package com.covid.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.covid.model.AdharCard;
+import com.covid.model.IdCard;
+import com.covid.model.Member;
+import com.covid.model.PanCard;
+
+public interface MemberIdRepo extends JpaRepository<Member,Integer> {
+	
+ public Member findByIdCardard(IdCard id);
+ 
+
+    //public Member findByIdCardard(IdCard id);
+
+
+	
+	
+	//public IdCard findByAdharCard(AdharCard adharcard);
+
+}

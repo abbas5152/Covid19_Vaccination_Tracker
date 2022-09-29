@@ -1,0 +1,24 @@
+package com.covid.service.member;
+
+import java.util.List;
+
+import com.covid.exception.MemberNotFoundException;
+import com.covid.model.Member;
+
+public interface MemberService {
+
+	public List<Member> getAllMember() throws MemberNotFoundException;
+	
+	public Member GetMemberById(Integer IdCardId) throws MemberNotFoundException;
+	
+	public Member GetMemberByAdharNo(Long AdharNo) throws MemberNotFoundException;
+	
+	public Member GetMemberByPanNo(String PanNo) throws MemberNotFoundException;
+	
+	public Member AddMember(Member member);
+	
+	public Member UpdateMember(Member member) throws MemberNotFoundException;
+	
+	public boolean DelteMember(Member member) throws MemberNotFoundException;
+	
+}

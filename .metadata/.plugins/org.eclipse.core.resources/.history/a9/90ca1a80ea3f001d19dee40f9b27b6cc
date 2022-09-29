@@ -1,0 +1,63 @@
+package com.covid.service.member;
+
+import java.nio.channels.MembershipKey;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.covid.model.Member;
+import com.covid.service.IdService.IdCardService;
+
+@Service
+public class MemberServiceImpl implements MemberService{
+
+	@Autowired
+	private MemberService dao;
+	
+	@Autowired
+	private IdCardService IdDao;
+	
+	@Override
+	public List<Member> getAllMember() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member GetMemberById(Integer IdCardId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member GetMemberByAdharNo(Long AdharNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member GetMemberByPanNo(String PanNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member AddMember(Member member) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member UpdateMember(Member member) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean DelteMember(Member member) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

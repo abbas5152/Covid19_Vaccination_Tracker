@@ -1,0 +1,40 @@
+package com.covid.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class AdharCard {
+		
+	private Long adhaarNo;
+	private String fingerPrint;
+	private String irisScan;
+	public Long getAdhaarNo() {
+		return adhaarNo;
+	}
+	public void setAdhaarNo(Long adhaarNo) {
+		this.adhaarNo = adhaarNo;
+	}
+	public String getFingerPrint() {
+		return fingerPrint;
+	}
+	public void setFingerPrint(String fingerPrint) {
+		this.fingerPrint = fingerPrint;
+	}
+	public String getIrisScan() {
+		return irisScan;
+	}
+	public void setIrisScan(String irisScan) {
+		this.irisScan = irisScan;
+	}
+	public AdharCard() {
+		
+	}
+	
+	
+}

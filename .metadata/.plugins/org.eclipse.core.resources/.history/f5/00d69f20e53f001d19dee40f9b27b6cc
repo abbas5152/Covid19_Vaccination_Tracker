@@ -1,0 +1,65 @@
+package com.covid.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.covid.exception.NoIdCardException;
+import com.covid.model.AdharCard;
+import com.covid.model.IdCard;
+import com.covid.model.PanCard;
+import com.covid.repo.IdCardRepo;
+
+
+@Service
+public class IdCardServiceImpl implements IdCardService {
+	
+	@Autowired
+	private IdCardRepo IdDao;
+
+	@Override
+	public IdCard getPanCardNumber(String panNo) throws NoIdCardException {
+		// TODO Auto-generated method stub
+		
+		PanCard pn=new PanCard();
+		pn.setPanNumber(panNo);
+		
+		IdCard id= IdDao.findByPanCard(pn);
+		if(id!=null) {
+			return id;
+		}
+		else
+			throw new NoIdCardException("There is No Id available on this pan number "+panNo);
+	}
+
+	@Override
+	public IdCard getAdharCardNumber(Long AdharNumber)  {
+		AdharCard adhr=new AdharCard();
+		adhr.setAdhaarNo(AdharNumber);
+		adhr.setFingerPrint(null);
+		adhr.setIrisScan(null);
+		
+		IdCard id= IdDao.findByAdharCard(adhr);
+//		System.out.println(id.getAdharCard().getAdhaarNo());
+//		System.out.println(AdharNumber);
+		if(id!=null) {
+	
+		
+			return id;
+		
+		}
+//		else {
+//			//System.out.println(id.getAdharCard().getAdhaarNo());
+//			System.out.println(AdharNumber);
+//			throw new NoIdCardException("There is No Id available on this Adhar number "+AdharNumber);
+//		}
+	}
+	
+
+	@Override
+	public IdCard addIdCard(IdCard idcard) {
+	
+	return IdDao.save(idcard);
+	
+	}
+
+}

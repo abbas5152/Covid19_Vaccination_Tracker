@@ -1,0 +1,23 @@
+package com.covid.service.member;
+
+import java.util.List;
+
+import com.covid.model.Member;
+
+public interface MemberService {
+
+	public List<Member> getAllMember();
+	
+	public Member GetMemberById(Integer IdCardId);
+	
+	public Member GetMemberByAdharNo(Long AdharNo);
+	
+	public Member GetMemberByPanNo(String PanNo);
+	
+	public Member AddMember(Member member);
+	
+	public Member UpdateMember(Member member);
+	
+	public boolean DelteMember(Member member);
+	
+}

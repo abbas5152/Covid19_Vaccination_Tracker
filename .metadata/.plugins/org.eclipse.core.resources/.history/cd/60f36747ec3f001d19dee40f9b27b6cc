@@ -1,0 +1,108 @@
+package com.covid.service.member;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.covid.exception.MemberNotFoundException;
+import com.covid.model.AdharCard;
+import com.covid.model.IdCard;
+import com.covid.model.Member;
+import com.covid.model.PanCard;
+import com.covid.repo.IdCardRepo;
+import com.covid.repo.MemberIdRepo;
+import com.covid.service.IdService.IdCardService;
+
+@Service
+public class MemberServiceImpl implements MemberService{
+
+	@Autowired
+	private MemberIdRepo dao;
+	
+	@Autowired
+	private IdCardRepo IdDao;
+	
+	@Override
+	public List<Member> getAllMember() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member GetMemberById(Integer IdCardId) {
+
+		Optional<IdCard> idcard = IdDao.findById(IdCardId);
+		if (idcard != null) {
+			Member mbyId = dao.findByIdCard(idcard);
+			if (mbyId != null) {
+				
+				return mbyId;
+			} else
+				throw new MemberNotFoundException("Member not found  with the IDCARD ID:" + idcardid);
+		} else
+			throw new MemberNotFoundException("Member not found  with the IDCARD ID:" + idcardid);
+	}
+
+	@Override
+	public Member GetMemberByAdharNo(Long AdharNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member GetMemberByPanNo(String PanNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member AddMember(Member member) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member UpdateMember(Member member) throws MemberNotFoundException {
+		
+		Optional<Member> mId = dao.findById(member.getMemberId());
+		if (mId.isPresent()) {
+			Member OldMember = mId.get();
+			if (member.getIdCard() != null) {
+				IdCard id = OldMember.getIdCard();
+				if (member.getIdCard().getDob() != null)
+					id.setDob(member.getIdCard().getDob());
+				if (member.getIdCard().getCity() != null)
+					id.setCity(member.getIdCard().getCity());
+				if (member.getIdCard().getGender() != null)
+					id.setGender(member.getIdCard().getGender());
+				if (member.getIdCard().getAddress() != null)
+					id.setAddress(member.getIdCard().getAddress());
+				if (member.getIdCard().getPinCode() != null)
+					id.setPinCode(member.getIdCard().getPinCode());
+				if (member.getIdCard().getState() != null)
+					id.setState(member.getIdCard().getState());
+
+				if (member.getIdCard().getAdharCard() != null) {
+					AdharCard adar = OldMember.getIdCard().getAdharCard();
+					adar.setAdhaarNo(member.getIdCard().getAdharCard().getAdhaarNo());
+				}
+
+				if (member.getIdCard().getPanCard() != null) {
+					PanCard pan = OldMember.getIdCard().getPanCard();
+					pan.setPanNumber(member.getIdCard().getPanCard().getPanNumber());
+				}
+			}
+			return dao.save(OldMember);
+		} else
+			throw new MemberNotFoundException("Member not found with the Member ID :" + member.getMemberId());
+	}
+
+	@Override
+	public boolean DelteMember(Member member) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.covid.repo.Idcard;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.covid.model.AdharCard;
+import com.covid.model.IdCard;
+import com.covid.model.PanCard;
+
+@Repository
+public interface IdCardRepo extends JpaRepository<IdCard,Integer> {
+	
+	public IdCard findByPancard(PanCard pancard);
+
+	public IdCard findByAdharcard(AdharCard adharcard);
+	
+	
+
+}

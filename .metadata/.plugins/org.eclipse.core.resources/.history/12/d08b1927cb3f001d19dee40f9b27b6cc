@@ -1,0 +1,46 @@
+package com.covid.service.IdCardService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.covid.exception.NoIdCardException;
+import com.covid.model.IdCard;
+import com.covid.repo.Idcard.IdCardRepo;
+
+
+@Service
+public class IdCardServiceImpl implements IdCardService {
+	
+	@Autowired
+	private IdCardRepo IdDao;
+
+//	@Override
+//	public IdCard getPanCardNumber(String panNo) throws NoIdCardException {
+//		// TODO Auto-generated method stub
+//		IdCard id= IdDao.getPanCardNumber(panNo);
+//		if(id!=null) {
+//			return id;
+//		}
+//		else
+//			throw new NoIdCardException("There is No Id available");
+//	}
+//
+//	@Override
+//	public IdCard getAdharCardNumber(Long AdharNumber) throws NoIdCardException {
+//		IdCard id= IdDao.getAdharCardNumber(AdharNumber);
+//		if(id!=null) {
+//			return id;
+//		}
+//		else
+//			throw new NoIdCardException("There is No Id available");
+//	}
+	
+
+	@Override
+	public IdCard addIdCard(IdCard idcard) {
+		
+	IdCard id= IdDao.save(idcard);
+	
+	}
+
+}

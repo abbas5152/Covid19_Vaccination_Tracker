@@ -1,0 +1,5 @@
+package com.covid.exception;
+
+public class MemberNotFoundException extends Exception {
+
+}

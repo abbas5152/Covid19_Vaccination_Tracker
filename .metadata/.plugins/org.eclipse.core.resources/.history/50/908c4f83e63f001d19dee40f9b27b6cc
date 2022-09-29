@@ -1,0 +1,7 @@
+package com.covid.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MemberIdRepo extends JpaRepository<T, ID> {
+
+}

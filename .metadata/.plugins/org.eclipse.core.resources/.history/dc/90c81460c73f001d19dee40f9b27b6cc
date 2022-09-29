@@ -1,0 +1,12 @@
+package com.covid.service.IdCardService;
+
+import com.covid.model.IdCard;
+
+public interface IdCardService {
+	
+    public IdCard getPanCardNumber(String panNo);
+	
+	public IdCard getAdharCardNumber(Long AdharNumber);
+
+	public IdCard addIdCard(IdCard idcard);
+}

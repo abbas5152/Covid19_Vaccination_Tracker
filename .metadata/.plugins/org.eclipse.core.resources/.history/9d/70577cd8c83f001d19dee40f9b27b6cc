@@ -1,0 +1,28 @@
+package com.covid.controller.IdCard;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.covid.exception.NoIdCardException;
+import com.covid.model.IdCard;
+import com.covid.service.IdCardService.IdCardService;
+
+@RestController
+public class IdCardController {
+	
+	
+	@Autowired
+	private IdCardService IdServ;
+
+	@GetMapping("/Id/{PanNo}")
+	public ResponseEntity<IdCard> GetIdByPanNo(@PathVariable String PanNo) throws NoIdCardException{
+		
+	IdCard ans=	IdServ.getPanCardNumber(PanNo);
+		
+		return new ResponseEntity<IdCard>(ans,HttpStatus.OK);
+	}
+}

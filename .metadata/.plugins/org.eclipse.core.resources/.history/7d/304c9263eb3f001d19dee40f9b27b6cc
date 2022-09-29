@@ -1,0 +1,96 @@
+package com.covid.service.member;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.covid.model.AdharCard;
+import com.covid.model.IdCard;
+import com.covid.model.Member;
+import com.covid.model.PanCard;
+import com.covid.service.IdService.IdCardService;
+
+@Service
+public class MemberServiceImpl implements MemberService{
+
+	@Autowired
+	private MemberService dao;
+	
+	@Autowired
+	private IdCardService IdDao;
+	
+	@Override
+	public List<Member> getAllMember() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member GetMemberById(Integer IdCardId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member GetMemberByAdharNo(Long AdharNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member GetMemberByPanNo(String PanNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member AddMember(Member member) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Member UpdateMember(Member member) {
+		
+		Optional<Member> mId = dao.;
+		if (mId.isPresent()) {
+			Member exist = mId.get();
+			if (member.getIdCard() != null) {
+				IdCard id = exist.getIdCard();
+				if (member.getIdCard().getDob() != null)
+					id.setDob(member.getIdCard().getDob());
+				if (member.getIdCard().getCity() != null)
+					id.setCity(member.getIdCard().getCity());
+				if (member.getIdCard().getGender() != null)
+					id.setGender(member.getIdCard().getGender());
+				if (member.getIdCard().getAddress() != null)
+					id.setAddress(member.getIdCard().getAddress());
+				if (member.getIdCard().getPincode() != null)
+					id.setPincode(member.getIdCard().getPincode());
+				if (member.getIdCard().getState() != null)
+					id.setState(member.getIdCard().getState());
+
+				if (member.getIdCard().getAdharcard() != null) {
+					AdharCard adar = exist.getIdCard().getAdharcard();
+					adar.setAdharNo(member.getIdCard().getAdharcard().getAdharNo());
+				}
+
+				if (member.getIdCard().getPancard() != null) {
+					PanCard pan = exist.getIdCard().getPancard();
+					pan.setPanNo(member.getIdCard().getPancard().getPanNo());
+				}
+			}
+			return dao.save(exist);
+		} else
+			throw new MemberNotFoundException("Member not found with the MEMBER ID :" + member.getMemberId());
+	}
+
+	@Override
+	public boolean DelteMember(Member member) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

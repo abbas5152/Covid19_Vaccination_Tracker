@@ -1,0 +1,16 @@
+package com.covid.repo.Idcard;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.covid.model.IdCard;
+
+
+public interface IdCardRepo extends JpaRepository<IdCard,Integer> {
+	
+	public IdCard getPanCardNumber(String panNo);
+	
+	public IdCard getAdharCardNumber(Long AdharNumber);
+	
+	
+
+}

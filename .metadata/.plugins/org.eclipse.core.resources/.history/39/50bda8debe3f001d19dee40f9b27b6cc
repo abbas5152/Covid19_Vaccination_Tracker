@@ -1,0 +1,33 @@
+package com.covid.service.IdCardService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.covid.model.IdCard;
+import com.covid.repo.Idcard.IdCardRepo;
+
+
+@Service
+public class IdCardServiceImpl implements IdCardService {
+	
+	@Autowired
+	private IdCardRepo IdDao;
+
+	@Override
+	public IdCard getPanCardNumber(String panNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IdCard getAdharCardNumber(Long AdharNumber) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IdCard addIdCard(IdCard idcard) {
+	retrun  IdDao.save
+	}
+
+}

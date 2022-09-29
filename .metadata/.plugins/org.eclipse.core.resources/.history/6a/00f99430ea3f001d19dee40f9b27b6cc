@@ -1,0 +1,5 @@
+package com.covid.service.member;
+
+public class MemberServiceImpl {
+
+}

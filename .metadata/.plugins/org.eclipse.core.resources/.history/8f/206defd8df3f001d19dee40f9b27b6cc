@@ -1,0 +1,13 @@
+package com.covid.service.IdCardService;
+
+import com.covid.exception.NoIdCardException;
+import com.covid.model.IdCard;
+
+public interface IdCardService {
+	
+    public IdCard getPanCardNumber(String panNo) throws NoIdCardException;
+	
+	public IdCard getAdharCardNumber(Long AdharNumber) throws NoIdCardException;
+
+	public IdCard addIdCard(IdCard idcard);
+}
