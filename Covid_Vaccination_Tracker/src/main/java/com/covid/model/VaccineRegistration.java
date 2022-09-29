@@ -23,9 +23,8 @@ import lombok.ToString;
 public class VaccineRegistration {
 		
 		@Id
-		@GeneratedValue(strategy = GenerationType.AUTO)
-		private Integer registrationid;
 		private Long mobileNumber;
+	
 		private LocalDate dateofRegistration;
 		
 		@OneToMany(cascade = CascadeType.ALL)
