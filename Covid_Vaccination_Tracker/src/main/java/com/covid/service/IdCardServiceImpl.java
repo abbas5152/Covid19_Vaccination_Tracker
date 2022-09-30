@@ -32,7 +32,8 @@ public class IdCardServiceImpl implements IdService {
 	@Override
 	public IdCard getIdCardByAdharNo(Long adharno) throws IdCardNotFoundException {
 		// TODO Auto-generated method stub
-		AdharCard adhr=new AdharCard(adharno);
+		AdharCard adhr=new AdharCard();
+		adhr.setAdhaarNo(adharno);
 		//adhr.setAdhaarNo(adharno);
 		IdCard idcard = IdDao.findByAdharCard(adhr);
 		if (idcard == null)

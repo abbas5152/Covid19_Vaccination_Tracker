@@ -36,7 +36,7 @@ public class MemberServiceImpl implements MemberService {
 //	VaccineDao vDao;
 //
 //	@Autowired
-//	VaccineCountDao countDao;
+//	VaccineCountDao vcDao;
 
 	@Override
 	public Member getMemberById(Integer idcardid) throws MemberNotFoundException {
@@ -191,9 +191,25 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public Member addMemberbyMobileNo(Member member, String mobileNo, String key) throws MemberNotFoundException {
-		// TODO Auto-generated method stub
-		return null;
+	public Member addMemberbyMobileNo(Member member, String mobileNo) throws MemberNotFoundException {
+		
+
+		Optional<VaccineRegistration> vacc = vrDao.findById(mobileNo);
+		if (vacc.isPresent()) {
+			IdCard idcard = idDao.findById(member.getIdCard().getId()).get();
+			if (idcard == null)
+
+			{
+				member.setVaccineRegistration(vacc.get());
+				member.setDose1date(null);
+				member.setDose2date(null);
+				member.setDose1status(false);
+				member.setDose2status(false);
+				return dao.save(member);
+			} else
+				throw new MemberNotFoundException("Member is already register");
+		} else
+			throw new MemberNotFoundException("This mobile number is not registered :" + mobileNo);
 	}
 
 	@Override

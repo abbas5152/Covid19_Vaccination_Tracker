@@ -102,4 +102,11 @@ public class controller {
 		
 		return new ResponseEntity<Member>(member,HttpStatus.FOUND);
 	}
+	@PostMapping("/Member/{Number}")
+	public ResponseEntity<Member> AddMemberHandler(@RequestBody Member member,@PathVariable String Number) throws MemberNotFoundException{
+		
+		Member m=memberservice.addMemberbyMobileNo(member, Number);
+		
+		return new ResponseEntity<Member>(m,HttpStatus.CREATED);
+	}
 }

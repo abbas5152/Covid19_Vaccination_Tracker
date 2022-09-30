@@ -39,59 +39,5 @@ public class Vaccine {
 	@OneToOne(cascade = CascadeType.ALL)
 	private VaccineCount vaccineCount;
 	
-	public Vaccine() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public Vaccine(Integer vaccineId, String vaccineName, String description, Member member,
-			VaccineCount vaccineCount) {
-		super();
-		this.vaccineId = vaccineId;
-		this.vaccineName = vaccineName;
-		this.description = description;
-		this.member = member;
-		this.vaccineCount = vaccineCount;
-	}
-
-	public Integer getVaccineId() {
-		return vaccineId;
-	}
-
-	public void setVaccineId(Integer vaccineId) {
-		this.vaccineId = vaccineId;
-	}
-
-	public String getVaccineName() {
-		return vaccineName;
-	}
-
-	public void setVaccineName(String vaccineName) {
-		this.vaccineName = vaccineName;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Member getMember() {
-		return member;
-	}
-
-	public void setMember(Member member) {
-		this.member = member;
-	}
-
-	public VaccineCount getVaccineCount() {
-		return vaccineCount;
-	}
-
-	public void setVaccineCount(VaccineCount vaccineCount) {
-		this.vaccineCount = vaccineCount;
-	}
-	
 	
 }
