@@ -5,6 +5,7 @@
 			<item value="/Users/akashsingh/Desktop/covid vaccination/wasteful-cast-8657"/>
 		</list>
 		<list key="projectNameTemplate">
+			<item value="void"/>
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
 			<item value="[artifactId]-[version]"/>

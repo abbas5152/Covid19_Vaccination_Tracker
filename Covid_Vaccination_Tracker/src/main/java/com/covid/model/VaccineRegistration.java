@@ -29,6 +29,30 @@ public class VaccineRegistration {
 		
 		@OneToMany(cascade = CascadeType.ALL)
 		private List<Member> memberList ;
+
+		public Long getMobileNumber() {
+			return mobileNumber;
+		}
+
+		public void setMobileNumber(Long mobileNumber) {
+			this.mobileNumber = mobileNumber;
+		}
+
+		public LocalDate getDateofRegistration() {
+			return dateofRegistration;
+		}
+
+		public void setDateofRegistration(LocalDate dateofRegistration) {
+			this.dateofRegistration = dateofRegistration;
+		}
+
+		public List<Member> getMemberList() {
+			return memberList;
+		}
+
+		public void setMemberList(List<Member> memberList) {
+			this.memberList = memberList;
+		}
 		
 	
 }
