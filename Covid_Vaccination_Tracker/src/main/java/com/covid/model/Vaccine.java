@@ -39,19 +39,7 @@ public class Vaccine {
 	@OneToOne(cascade = CascadeType.ALL)
 	private VaccineCount vaccineCount;
 	
-	public Vaccine() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public Vaccine(Integer vaccineId, String vaccineName, String description, Member member,
-			VaccineCount vaccineCount) {
-		super();
-		this.vaccineId = vaccineId;
-		this.vaccineName = vaccineName;
-		this.description = description;
-		this.member = member;
-		this.vaccineCount = vaccineCount;
-	}
+	
 
 	public Integer getVaccineId() {
 		return vaccineId;
