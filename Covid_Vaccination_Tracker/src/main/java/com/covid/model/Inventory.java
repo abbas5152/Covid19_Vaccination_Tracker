@@ -30,6 +30,7 @@ public class Inventory {
 	private Integer inventoryId;
 	
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+	@NotNull(message = "Date should not be Null")
 	private LocalDate date;
 	
 	@OneToMany(cascade = CascadeType.ALL)
