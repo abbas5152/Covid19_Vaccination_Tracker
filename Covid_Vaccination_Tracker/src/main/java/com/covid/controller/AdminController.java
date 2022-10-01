@@ -10,21 +10,38 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.covid.exception.IdCardNotFoundException;
+import com.covid.exception.MemberNotFoundException;
+import com.covid.exception.MemberNotRegisterException;
 import com.covid.exception.VaccineInventoryNotFound;
 import com.covid.model.Admin;
+import com.covid.model.IdCard;
 import com.covid.model.Inventory;
+import com.covid.model.Member;
 import com.covid.repo.AdminDao;
+import com.covid.service.IdService;
+import com.covid.service.MemberService;
 import com.covid.service.VaccineInventoryService;
 
 @RestController
-@RequestMapping("/admin/")
+@RequestMapping("/admin")
 public class AdminController {
 
 	@Autowired
 	AdminDao adminDao ;
+	
+	@Autowired
+	private IdService idservice;
+	
+	@Autowired
+	private MemberService memberservice;
+	
 	
 	@Autowired
 	VaccineInventoryService vaccineInventoryService;
@@ -36,7 +53,59 @@ public class AdminController {
 		
 	}
 	
+
+	@GetMapping("/IdByAdhar/{AdharNo}")
+	public ResponseEntity<IdCard> FindByAdharHandler(@PathVariable Long AdharNo,@RequestParam String key) throws IdCardNotFoundException{
+		
+		IdCard idc=idservice.getIdCardByAdharNo(AdharNo, key);
+		return new ResponseEntity<IdCard>(idc,HttpStatus.FOUND);
+		
+	}
 	
+	@GetMapping("/IdByPan/{PanNo}")
+	public ResponseEntity<IdCard> FindByPanHandler(@PathVariable String PanNo,@RequestParam String key) throws IdCardNotFoundException{
+		
+		IdCard idc=idservice.getIdcardByPanNo(PanNo, key);
+		return new ResponseEntity<IdCard>(idc,HttpStatus.FOUND);
+		
+	}
+	
+	@GetMapping("/Members")
+	public ResponseEntity<List<Member>> FindAllMembersHandler(@RequestParam String key) throws MemberNotRegisterException{
+		List<Member> members=memberservice.GetallTheMembers(key);
+		
+		return new ResponseEntity<List<Member>>(members,HttpStatus.FOUND);
+	}
+	@GetMapping("/MemberById/{id}")
+	public ResponseEntity<Member> FindByIdHandler(@PathVariable Integer id,@RequestParam String key) throws MemberNotFoundException{
+		
+	Member member=	memberservice.getMemberById(id, key);
+	return new ResponseEntity<Member>(member,HttpStatus.FOUND);
+	
+		
+	}
+	@PutMapping("/Member")
+	public ResponseEntity<Member> UpdateMemberHandler(@RequestBody Member member,@RequestParam String key) throws MemberNotFoundException{
+		Member memb=memberservice.updateMember(member, key);
+		
+		return new ResponseEntity<Member>(member,HttpStatus.FOUND);
+	}
+	@GetMapping("/MemberByPan/{PanNo}")
+	public ResponseEntity<Member> FindByPanMemberHandler(@PathVariable String PanNo,@RequestParam String key) throws MemberNotFoundException{
+		
+	Member member=	memberservice.getMemberByPanNo(PanNo, key);
+	return new ResponseEntity<Member>(member,HttpStatus.FOUND);
+	
+		
+	}
+	@GetMapping("/MemberByAdhar/{AdharNo}")
+	public ResponseEntity<Member> FindByAdharMemberHandler(@PathVariable Long AdharNo,@RequestParam String key) throws MemberNotFoundException{
+		
+	Member member=	memberservice.getMemberByAdharNo(AdharNo, key);
+	return new ResponseEntity<Member>(member,HttpStatus.FOUND);
+	
+		
+	}
 	@PostMapping("/addInventory/")
 	public ResponseEntity<Inventory> saveInventory(@RequestBody Inventory inv) throws VaccineInventoryNotFound {
 		

@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+D:\Desktop\Covid_Vaccination_Tracker\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-3639761942.index
-1067094681.index
