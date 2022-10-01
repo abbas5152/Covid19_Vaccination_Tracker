@@ -26,19 +26,53 @@ import com.covid.service.MemberService;
 @RequestMapping("/customer")
 public class CustomerController {
 
-	@Autowired
-	CustomerDao customerDao ;
+        @Autowired
+	CustomerService customerDao ;
 	
 	@Autowired
 	private IdService idservice;
+	@Autowired
+	AppointmentService appointmentService ;
 	
 	@Autowired
 	private MemberService memberservice;
 	
 	@PostMapping("/")
-	public Customer saveCustomer(@RequestBody Customer customer) {
-		return customerDao.save(customer) ;
+	public ResponseEntity<Customer> saveCustomer(@RequestBody Customer customer) {
+		
+		Customer cus =  customerDao.registerCustomer(customer) ;
+		return new ResponseEntity<Customer>(cus,HttpStatus.CREATED) ;
 	}
+	
+	@PutMapping("/")
+	public ResponseEntity<Customer> UpdateCustomer(@RequestBody Customer customer) throws CustomerException {
+		
+		Customer cus =  customerDao.updateCustomer(customer);
+		return new ResponseEntity<Customer>(cus,HttpStatus.OK) ;
+	}
+	
+	@GetMapping("/{customerId}")
+	public ResponseEntity<Customer> getCusotmerByAdminId(@PathVariable("cusotmerId") Integer customerId ) throws CustomerException {
+		
+		Customer cus =  customerDao.getCustomerById(customerId);
+		
+		return new ResponseEntity<Customer>(cus,HttpStatus.OK) ;
+	}
+	@DeleteMapping("/{customerId}")
+	public ResponseEntity<Customer> deleteCustomerById(@PathVariable("customerId") Integer customerId ) throws CustomerException {
+		
+		Customer cus =  customerDao.deleteCustomerById(customerId);
+		return new ResponseEntity<Customer>(cus,HttpStatus.OK) ;
+	}
+	
+	@GetMapping("/getAppointment/{bookingId}/{key}")
+	public ResponseEntity<Appointment> getAppointment(@PathVariable("bookingId") long bookingId ,@PathVariable("key") String key) throws AppointmentException {
+		
+		Appointment app =  appointmentService.getAppointmentByBookingId(bookingId, key) ;
+		
+		return new ResponseEntity<>(app,HttpStatus.ACCEPTED);
+	}
+	
 	@PostMapping("/Id")
 	public ResponseEntity<IdCard> AddIdCardHandler(@RequestBody IdCard idcard,@RequestParam String key) throws IdCardNotRegisterException{
 		
