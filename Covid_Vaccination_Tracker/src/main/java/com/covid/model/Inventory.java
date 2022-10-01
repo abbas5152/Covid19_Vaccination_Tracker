@@ -9,8 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
@@ -28,13 +28,14 @@ public class Inventory {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer inventoryId;
+	
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private LocalDate date;
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<VaccinationCenter> ListvaccinationCenter;
 	
 	@OneToMany(cascade = CascadeType.ALL)
-	@JsonIgnore
 	private List<VaccineCount> vaccinecountList;
 	
 }

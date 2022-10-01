@@ -28,6 +28,38 @@ public class VaccineInventoryServiceImpl implements VaccineInventoryService{
 	private VaccineCountDao vcDao;
 	
 	@Override
+	public Inventory saveInventory(Inventory inv) throws VaccineInventoryNotFound {
+		
+//		Optional<Inventory> opt = invDao.findById(inv.getInventoryId());
+//		
+//		if (opt.isPresent()) {
+//			
+//			throw new VaccineInventoryNotFound("VaccineInventory already exists!");
+//			
+//		}
+		
+		
+		List<VaccinationCenter> vaccineCenterList = inv.getListvaccinationCenter();
+		
+		for (VaccinationCenter vaccinationCenter : vaccineCenterList) {
+			
+			vaccinationCenter.setInventory(inv);
+			
+		}
+		
+		List<VaccineCount> vaccinecountList = inv.getVaccinecountList();
+		
+		for (VaccineCount vaccineCount : vaccinecountList) {
+			
+			vaccineCount.setInventory(inv);
+		
+		}
+		
+		return invDao.save(inv);
+		
+	}
+	
+	@Override
 	public List<Inventory> allVaccineInventory() throws VaccineInventoryNotFound {
 		
 		List<Inventory> list = invDao.findAll();
@@ -100,13 +132,13 @@ public class VaccineInventoryServiceImpl implements VaccineInventoryService{
 	}
 
 	@Override
-	public Boolean deleteVaccineInventory(Inventory vaccineInv) throws VaccineInventoryNotFound {
+	public Boolean deleteVaccineInventory(Integer inventoryId) throws VaccineInventoryNotFound {
 		
-		Optional<Inventory> opt = invDao.findById(vaccineInv.getInventoryId());
+		Optional<Inventory> opt = invDao.findById(inventoryId);
 		
 		if(opt.isPresent()) {
 			
-			invDao.deleteById(vaccineInv.getInventoryId());
+			invDao.deleteById(inventoryId);
 			
 			return true;
 			
@@ -129,5 +161,7 @@ public class VaccineInventoryServiceImpl implements VaccineInventoryService{
 		
 		throw new VaccineInventoryNotFound("No vaccine Found on this date");
 	}
+
+	
 
 }
