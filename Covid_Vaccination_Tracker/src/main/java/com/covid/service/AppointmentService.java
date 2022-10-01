@@ -2,6 +2,9 @@ package com.covid.service;
 
 import java.util.List;
 import org.springframework.stereotype.Service;
+
+import com.covid.exception.MemberNotFoundException;
+import com.covid.exception.VaccineRegistrationException;
 import com.covid.model.Appointment;
 
 
@@ -12,7 +15,7 @@ public interface AppointmentService {
 
 	public Appointment getAppointmentByBookingId(Long bookingId,String key);
 
-	public Appointment addAppointment(Appointment app, Integer memId,String key);
+	public Appointment addAppointment(Appointment app, Integer memId,String key) throws VaccineRegistrationException, MemberNotFoundException;
 
 	public Appointment updateAppointment(Appointment app,String key);
 
