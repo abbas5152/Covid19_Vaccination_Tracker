@@ -141,4 +141,12 @@ public class CustomerController {
 		             return x;
 	  }
 	
+	
+	//vaccine center service user
+	
+	@GetMapping("/vaccination_centers")
+	public ResponseEntity<List<VaccinationCenter>> getVaccineCenters(@RequestParam String key) {
+		return new ResponseEntity<List<VaccinationCenter>>(vaccinationCenterService.allVaccineCenters(key), HttpStatus.OK);
+	}
+	
 }
