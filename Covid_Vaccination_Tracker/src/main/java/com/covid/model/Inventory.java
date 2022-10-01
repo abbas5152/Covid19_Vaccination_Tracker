@@ -30,10 +30,10 @@ public class Inventory {
 	private Integer inventoryId;
 	private LocalDate date;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedB y= "inventory")
 	private List<VaccinationCenter> ListvaccinationCenter;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "inventory")
 	@JsonIgnore
 	private List<VaccineCount> vaccinecountList;
 	
