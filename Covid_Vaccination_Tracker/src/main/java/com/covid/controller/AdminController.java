@@ -163,4 +163,136 @@ public class AdminController {
 		return new ResponseEntity<List<Inventory>>(inv,HttpStatus.ACCEPTED);
 		
 	}
+	
+	// Vaccine controler start--->
+	
+	@Autowired
+	private IdService idservice;
+	
+	@Autowired
+	private MemberService memberservice;
+	
+	//for id
+	@PostMapping("/Id")
+	public ResponseEntity<IdCard> AddIdCardHandler(@RequestBody IdCard idcard) throws IdCardNotRegisterException{
+		
+		IdCard idc=idservice.addIdCard(idcard);
+		
+		return new ResponseEntity<IdCard>(idc,HttpStatus.CREATED);
+	}
+	
+	@GetMapping("/IdByAdhar/{AdharNo}")
+	public ResponseEntity<IdCard> FindByAdharHandler(@PathVariable Long AdharNo) throws IdCardNotFoundException{
+		
+		IdCard idc=idservice.getIdCardByAdharNo(AdharNo);
+		return new ResponseEntity<IdCard>(idc,HttpStatus.FOUND);
+		
+	}
+	
+	@GetMapping("/IdByPan/{PanNo}")
+	public ResponseEntity<IdCard> FindByPanHandler(@PathVariable String PanNo) throws IdCardNotFoundException{
+		
+		IdCard idc=idservice.getIdcardByPanNo(PanNo);
+		return new ResponseEntity<IdCard>(idc,HttpStatus.FOUND);
+		
+	}
+	
+	//for member
+	
+	@GetMapping("/MemberById/{id}")
+	public ResponseEntity<Member> FindByIdHandler(@PathVariable Integer id) throws MemberNotFoundException{
+		
+	Member member=	memberservice.getMemberById(id);
+	return new ResponseEntity<Member>(member,HttpStatus.FOUND);
+	
+		
+	}
+	
+	@GetMapping("/MemberByPan/{PanNo}")
+	public ResponseEntity<Member> FindByPanMemberHandler(@PathVariable String PanNo) throws MemberNotFoundException{
+		
+	Member member=	memberservice.getMemberByPanNo(PanNo);
+	return new ResponseEntity<Member>(member,HttpStatus.FOUND);
+	
+		
+	}
+	@GetMapping("/MemberByAdhar/{AdharNo}")
+	public ResponseEntity<Member> FindByAdharMemberHandler(@PathVariable Long AdharNo) throws MemberNotFoundException{
+		
+	Member member=	memberservice.getMemberByAdharNo(AdharNo);
+	return new ResponseEntity<Member>(member,HttpStatus.FOUND);
+	
+		
+	}
+	@GetMapping("/Members")
+	public ResponseEntity<List<Member>> FindAllMembersHandler() throws MemberNotRegisterException{
+		List<Member> members=memberservice.GetallTheMembers();
+		
+		return new ResponseEntity<List<Member>>(members,HttpStatus.FOUND);
+	}
+	@DeleteMapping("/Member")
+	public ResponseEntity<Boolean> DeleteMemberHandler(@RequestBody Member member) throws MemberNotFoundException{
+		Boolean ans=memberservice.deleteMemberRecord(member);
+		return new ResponseEntity<Boolean>(ans,HttpStatus.ACCEPTED);
+		
+	}
+
+	@PutMapping("/Member")
+	public ResponseEntity<Member> UpdateMemberHandler(@RequestBody Member member) throws MemberNotFoundException{
+		Member memb=memberservice.updateMember(member);
+		
+		return new ResponseEntity<Member>(member,HttpStatus.FOUND);
+	}
+	@PostMapping("/Member/{Number}")
+	public ResponseEntity<Member> AddMemberHandler(@RequestBody Member member,@PathVariable String Number) throws MemberNotFoundException{
+		
+		Member m=memberservice.addMemberbyMobileNo(member, Number);
+		
+		return new ResponseEntity<Member>(m,HttpStatus.CREATED);
+	}
+	
+	// vaccine controler start-->>>
+	
+	@Autowired
+	  private VaccineService  serviceVaccine;
+	
+	@PostMapping("/vaccine")
+	  public ResponseEntity<Vaccine> AddVaccine( @RequestBody Vaccine vaccine, @RequestParam String key) throws VaccineNotFoundException{
+		  
+		     return new ResponseEntity<Vaccine>(serviceVaccine.addVaccine(vaccine,key),HttpStatus.CREATED);
+	  }
+	
+	@GetMapping("/vaccines")
+	public ResponseEntity<List<Vaccine>> gettAllVaccine(@RequestParam String key) throws VaccineNotFoundException{
+		
+		   List<Vaccine> allvaccine= serviceVaccine.getAllVaccine(key);
+		   
+		   return new ResponseEntity<List<Vaccine>>(allvaccine,HttpStatus.OK);
+	}
+	
+	@GetMapping("/vaccines/{vaccineName}")
+	public ResponseEntity<List<Vaccine>> getVaccineByName(  @PathVariable("vaccineName")  String vaccineName,@RequestParam String key) throws VaccineNotFoundException{
+		
+		       List<Vaccine> vaccineByName= serviceVaccine.getVaccineByVccineName(vaccineName,key);
+		       
+		       return new ResponseEntity<List<Vaccine>>(vaccineByName, HttpStatus.OK);
+	}
+	
+	@GetMapping("vaccine/{vaccineId}")
+	public ResponseEntity<Vaccine> getVaccinesById( @PathVariable("vaccineId") Integer vaccineId,@RequestParam String key) throws VaccineNotFoundException{
+		
+		  return new ResponseEntity<Vaccine>(serviceVaccine.getVaccineById(vaccineId,key),HttpStatus.OK);
+	}
+
+	@PutMapping("/vaccine")
+	  public ResponseEntity<Vaccine> UpdateVaccine( @RequestBody Vaccine vaccine,@RequestParam String key) throws VaccineNotFoundException{
+		  
+		     return new ResponseEntity<Vaccine>(serviceVaccine.updateVaccine(vaccine,key),HttpStatus.OK);
+	  }
+	
+	@DeleteMapping("/vaccine")
+	public ResponseEntity<Vaccine> DeleteVaccine( @RequestBody Vaccine vaccine,@RequestParam String key) throws VaccineNotFoundException{
+		
+		return new ResponseEntity<Vaccine>(serviceVaccine.DeleteVaccine(vaccine,key),HttpStatus.OK);
+	}
 }
