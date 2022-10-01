@@ -48,7 +48,7 @@ public class AppointmentServiceImpl implements AppointmentService{
 	
 	
 	@Override
-	public List<Appointment> getAllAppointment(String key) {
+	public List<Appointment> getAllAppointment(String key) throws AppointmentException {
 		 AdminLoginSession adminLoginSession = adminLoginSessionDao.findByUuid(key);
 			
 			if(adminLoginSession ==null  ) {
@@ -64,7 +64,7 @@ public class AppointmentServiceImpl implements AppointmentService{
 	}
 
 	@Override
-	public Appointment getAppointmentByBookingId(Long bookingId, String key) {
+	public Appointment getAppointmentByBookingId(Long bookingId, String key) throws AppointmentException {
 		
 		AdminLoginSession adminLoginSession = adminLoginSessionDao.findByUuid(key);
 		
@@ -88,7 +88,7 @@ public class AppointmentServiceImpl implements AppointmentService{
 	
 
 	@Override
-	public Appointment addAppointment(Appointment app, Integer memId, String key) throws VaccineRegistrationException, MemberNotFoundException {
+	public Appointment addAppointment(Appointment app, Integer memId, String key) throws VaccineRegistrationException, MemberNotFoundException, AppointmentException {
 		CustomerLoginSession customerLoginSession = customerLoginSessionDao.findByUuid(key);
 			
 			if(customerLoginSession==null) {
@@ -133,7 +133,7 @@ public class AppointmentServiceImpl implements AppointmentService{
 	}
 
 	@Override
-	public Appointment updateAppointment(Appointment app, String key) {
+	public Appointment updateAppointment(Appointment app, String key) throws AppointmentException {
     AdminLoginSession adminLoginSession = adminLoginSessionDao.findByUuid(key);
 		
 		CustomerLoginSession customerLoginSession = customerLoginSessionDao.findByUuid(key);
@@ -153,7 +153,7 @@ public class AppointmentServiceImpl implements AppointmentService{
 	}
 
 	@Override
-	public boolean deleteAppointment(Long bookingId, String key) {
+	public boolean deleteAppointment(Long bookingId, String key) throws AppointmentException {
 		 AdminLoginSession adminLoginSession = adminLoginSessionDao.findByUuid(key);
 			
 			CustomerLoginSession customerLoginSession = customerLoginSessionDao.findByUuid(key);
