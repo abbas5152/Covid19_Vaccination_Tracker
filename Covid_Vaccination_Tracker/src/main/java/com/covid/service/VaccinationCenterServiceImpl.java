@@ -34,13 +34,7 @@ public class VaccinationCenterServiceImpl implements VaccinationCenterService {
 	@Override
 	public List<VaccinationCenter> allVaccineCenters(String key) {
 		
-//		 Optional<CurrentAdminSession> optCurrAdmin= adminSessionDAO.findByUuid(key);
-//		 Optional<CurrentUserSession> optCurrUser= userSessionDAO.findByUuid(key);
-			
-//			if(!optCurrAdmin.isPresent()&&!optCurrUser.isPresent()) {
-//				
-//				throw new RuntimeException("Unauthorised access");
-//			}
+
 		
 		AdminLoginSession adminLoginSession = adminLoginSessionDao.findByUuid(key);
 		CustomerLoginSession customerLoginSession = customerLoginSessionDao.findByUuid(key);
