@@ -33,10 +33,10 @@ public class Inventory {
 	@NotNull(message = "Date should not be Null")
 	private LocalDate date;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy= "inventory")
 	private List<VaccinationCenter> ListvaccinationCenter;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy= "inventory")
 	private List<VaccineCount> vaccinecountList;
 	
 }
