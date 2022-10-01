@@ -48,7 +48,7 @@ public class Member {
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Vaccine vaccine;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "member")
 	private  List<Appointment> listofappointments;
 	
 	

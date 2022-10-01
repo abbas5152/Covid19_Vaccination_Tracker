@@ -6,16 +6,26 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.covid.exception.AppointmentException;
+import com.covid.exception.LoginException;
 import com.covid.exception.MemberNotFoundException;
 import com.covid.exception.MemberNotRegisterException;
 import com.covid.model.AdharCard;
+import com.covid.model.AdminLoginSession;
+import com.covid.model.Appointment;
+import com.covid.model.CustomerLoginSession;
 import com.covid.model.IdCard;
 import com.covid.model.Member;
 import com.covid.model.PanCard;
 import com.covid.model.Vaccine;
 import com.covid.model.VaccineRegistration;
+import com.covid.repo.AdminLoginSessionDao;
+import com.covid.repo.AppointmentDao;
+import com.covid.repo.CustomerLoginSessionDao;
 import com.covid.repo.IdRepo;
 import com.covid.repo.MemberDao;
+import com.covid.repo.VaccineDao;
+import com.covid.repo.VaccineRegistrationDao;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -26,28 +36,40 @@ public class MemberServiceImpl implements MemberService {
 	@Autowired
 	IdRepo idDao;
 
-//	@Autowired
-//	VaccineRegistrationDao vrDao;
-//
-//	@Autowired
-//	AppointmentDao apDao;
-//
-//	@Autowired
-//	VaccineDao vDao;
-//
-//	@Autowired
-//	VaccineCountDao vcDao;
+	@Autowired
+	VaccineRegistrationDao vrDao;
+
+	@Autowired
+	AppointmentDao apDao;
+
+	@Autowired
+	VaccineDao vDao;
+	
+	@Autowired
+	CustomerLoginSessionDao customerLogin;
+	
+	@Autowired
+	AdminLoginSessionDao  adminLogin;
+
 
 	@Override
-	public Member getMemberById(Integer idcardid) throws MemberNotFoundException {
+	public Member getMemberById(Integer idcardid,String key) throws MemberNotFoundException {
 		
+AdminLoginSession adminLoginSession = adminLogin.findByUuid(key);
+		
+		CustomerLoginSession customerLoginSession = customerLogin.findByUuid(key);
+			
+			if(adminLoginSession==null && customerLoginSession==null) {
+				
+				throw new AppointmentException("Unauthorised access");
+			}
 		
 		Optional<IdCard> idcard = idDao.findById(idcardid);
 		if (idcard.isPresent()) {
 			Member member = dao.findByIdCard(idcard.get());
 			if (member != null) {
-//				List<Appointment> appointment = apDao.findByMember(mbyId);
-//				mbyId.setAppointments(appointment);
+				List<Appointment> appointment = apDao.findByMember(member);
+				member.setListofappointments(appointment);
 				
 				return member;
 			} else
@@ -58,7 +80,17 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public Member getMemberByAdharNo(Long adharNo) throws MemberNotFoundException {
+	public Member getMemberByAdharNo(Long adharNo,String key) throws MemberNotFoundException {
+		
+AdminLoginSession adminLoginSession = adminLogin.findByUuid(key);
+		
+	
+			
+			if(adminLoginSession==null) {
+				
+				throw new AppointmentException("Unauthorised access");
+			}
+	       
 		AdharCard adhr=new AdharCard();
 		adhr.setAdhaarNo(adharNo);
 		IdCard idcard = idDao.findByAdharCard(adhr);
@@ -74,7 +106,15 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public Member getMemberByPanNo(String panNo) throws MemberNotFoundException {
+	public Member getMemberByPanNo(String panNo,String key) throws MemberNotFoundException {
+AdminLoginSession adminLoginSession = adminLogin.findByUuid(key);
+		
+		
+			
+			if(adminLoginSession==null) {
+				
+				throw new AppointmentException("Unauthorised access");
+			}
 		PanCard pn=new PanCard();
 		pn.setPanNumber(panNo);
 		IdCard idcard = idDao.findByPanCard(pn);
@@ -92,7 +132,16 @@ public class MemberServiceImpl implements MemberService {
 	
 
 	@Override
-	public Member updateMember(Member member) throws MemberNotFoundException {
+	public Member updateMember(Member member,String key) throws MemberNotFoundException {
+		
+AdminLoginSession adminLoginSession = adminLogin.findByUuid(key);
+		
+		CustomerLoginSession customerLoginSession = customerLogin.findByUuid(key);
+			
+			if(adminLoginSession==null && customerLoginSession==null) {
+				
+				throw new AppointmentException("Unauthorised access");
+			}
 
 		Optional<Member> mem = dao.findById(member.getMemberId());
 		if (mem.isPresent()) {
@@ -166,23 +215,32 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public boolean deleteMemberRecord(Member member) throws MemberNotFoundException {
+	public boolean deleteMemberRecord(Member member,String key) throws MemberNotFoundException {
+		
+
+		
+		CustomerLoginSession customerLoginSession = customerLogin.findByUuid(key);
+			
+			if(customerLoginSession==null) {
+				
+				throw new AppointmentException("Unauthorised access");
+			}
 
 		Optional<Member> mem = dao.findById(member.getMemberId());
 		if (mem.isPresent()) {
 			Member oldMember = mem.get();
 			
-//			if (oldMember.getVaccineRegistration() != null)
-//				vrDao.delete(oldMember.getVaccineRegistration());
+			if (oldMember.getVaccineRegistration() != null)
+				vrDao.delete(oldMember.getVaccineRegistration());
 			
 			if (oldMember.getIdCard() != null)
 				idDao.delete(oldMember.getIdCard());
 			
-//			if (oldMember.getAppointments() != null)
-//				apDao.deleteAll(exist.getAppointments());
-//			
-//			if (oldMember.getVaccine() != null)
-//				vDao.delete(oldMember.getVaccine());
+			if (oldMember.getListofappointments() != null)
+				apDao.deleteAll(oldMember.getListofappointments());
+			
+			if (oldMember.getVaccine() != null)
+				vDao.delete(oldMember.getVaccine());
 			
 			dao.delete(member);
 			return true;
@@ -191,9 +249,17 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public Member addMemberbyMobileNo(Member member, String mobileNo) throws MemberNotFoundException {
+	public Member addMemberbyMobileNo(Member member, String mobileNo,String key) throws MemberNotFoundException {
 		
 
+		 CustomerLoginSession custLoginSession = customerLogin.findByUuid(key);
+			
+	       if(custLoginSession==null) {
+			
+			throw new LoginException("Unauthorised access");
+		}
+		
+		
 		Optional<VaccineRegistration> vacc = vrDao.findById(mobileNo);
 		if (vacc.isPresent()) {
 			IdCard idcard = idDao.findById(member.getIdCard().getId()).get();
@@ -213,7 +279,14 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public List<Member> GetallTheMembers() throws MemberNotRegisterException {
+	public List<Member> GetallTheMembers(String key) throws MemberNotRegisterException {
+AdminLoginSession adminLoginSession = adminLogin.findByUuid(key);
+		
+			
+			if(adminLoginSession==null) {
+				
+				throw new AppointmentException("Unauthorised access");
+			}
 		List<Member> member=	dao.findAll();
 		if(member.size()>0)
 			return member;

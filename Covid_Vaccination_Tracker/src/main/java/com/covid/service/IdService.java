@@ -7,10 +7,10 @@ import com.covid.model.IdCard;
 public interface IdService {
 	
 
-	public IdCard getIdcardByPanNo(String panNumber) throws IdCardNotFoundException;
+	public IdCard getIdcardByPanNo(String panNumber,String key) throws IdCardNotFoundException;
 
-	public IdCard getIdCardByAdharNo(Long adharnumber) throws IdCardNotFoundException;
+	public IdCard getIdCardByAdharNo(Long adharnumber,String key) throws IdCardNotFoundException;
 
-	public IdCard addIdCard(IdCard idCard) throws IdCardNotRegisterException;
+	public IdCard addIdCard(IdCard idCard,String key) throws IdCardNotRegisterException;
 
 }

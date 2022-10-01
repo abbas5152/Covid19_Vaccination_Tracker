@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.covid.exception.IdCardNotFoundException;
@@ -33,25 +34,25 @@ public class controller {
 	
 	//for id
 	@PostMapping("/Id")
-	public ResponseEntity<IdCard> AddIdCardHandler(@RequestBody IdCard idcard) throws IdCardNotRegisterException{
+	public ResponseEntity<IdCard> AddIdCardHandler(@RequestBody IdCard idcard,@RequestParam String key) throws IdCardNotRegisterException{
 		
-		IdCard idc=idservice.addIdCard(idcard);
+		IdCard idc=idservice.addIdCard(idcard, key);
 		
 		return new ResponseEntity<IdCard>(idc,HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/IdByAdhar/{AdharNo}")
-	public ResponseEntity<IdCard> FindByAdharHandler(@PathVariable Long AdharNo) throws IdCardNotFoundException{
+	public ResponseEntity<IdCard> FindByAdharHandler(@PathVariable Long AdharNo,@RequestParam String key) throws IdCardNotFoundException{
 		
-		IdCard idc=idservice.getIdCardByAdharNo(AdharNo);
+		IdCard idc=idservice.getIdCardByAdharNo(AdharNo, key);
 		return new ResponseEntity<IdCard>(idc,HttpStatus.FOUND);
 		
 	}
 	
 	@GetMapping("/IdByPan/{PanNo}")
-	public ResponseEntity<IdCard> FindByPanHandler(@PathVariable String PanNo) throws IdCardNotFoundException{
+	public ResponseEntity<IdCard> FindByPanHandler(@PathVariable String PanNo,@RequestParam String key) throws IdCardNotFoundException{
 		
-		IdCard idc=idservice.getIdcardByPanNo(PanNo);
+		IdCard idc=idservice.getIdcardByPanNo(PanNo, key);
 		return new ResponseEntity<IdCard>(idc,HttpStatus.FOUND);
 		
 	}
@@ -59,53 +60,53 @@ public class controller {
 	//for member
 	
 	@GetMapping("/MemberById/{id}")
-	public ResponseEntity<Member> FindByIdHandler(@PathVariable Integer id) throws MemberNotFoundException{
+	public ResponseEntity<Member> FindByIdHandler(@PathVariable Integer id,@RequestParam String key) throws MemberNotFoundException{
 		
-	Member member=	memberservice.getMemberById(id);
+	Member member=	memberservice.getMemberById(id, key);
 	return new ResponseEntity<Member>(member,HttpStatus.FOUND);
 	
 		
 	}
 	
 	@GetMapping("/MemberByPan/{PanNo}")
-	public ResponseEntity<Member> FindByPanMemberHandler(@PathVariable String PanNo) throws MemberNotFoundException{
+	public ResponseEntity<Member> FindByPanMemberHandler(@PathVariable String PanNo,@RequestParam String key) throws MemberNotFoundException{
 		
-	Member member=	memberservice.getMemberByPanNo(PanNo);
+	Member member=	memberservice.getMemberByPanNo(PanNo, key);
 	return new ResponseEntity<Member>(member,HttpStatus.FOUND);
 	
 		
 	}
 	@GetMapping("/MemberByAdhar/{AdharNo}")
-	public ResponseEntity<Member> FindByAdharMemberHandler(@PathVariable Long AdharNo) throws MemberNotFoundException{
+	public ResponseEntity<Member> FindByAdharMemberHandler(@PathVariable Long AdharNo,@RequestParam String key) throws MemberNotFoundException{
 		
-	Member member=	memberservice.getMemberByAdharNo(AdharNo);
+	Member member=	memberservice.getMemberByAdharNo(AdharNo, key);
 	return new ResponseEntity<Member>(member,HttpStatus.FOUND);
 	
 		
 	}
 	@GetMapping("/Members")
-	public ResponseEntity<List<Member>> FindAllMembersHandler() throws MemberNotRegisterException{
-		List<Member> members=memberservice.GetallTheMembers();
+	public ResponseEntity<List<Member>> FindAllMembersHandler(@RequestParam String key) throws MemberNotRegisterException{
+		List<Member> members=memberservice.GetallTheMembers(key);
 		
 		return new ResponseEntity<List<Member>>(members,HttpStatus.FOUND);
 	}
 	@DeleteMapping("/Member")
-	public ResponseEntity<Boolean> DeleteMemberHandler(@RequestBody Member member) throws MemberNotFoundException{
-		Boolean ans=memberservice.deleteMemberRecord(member);
+	public ResponseEntity<Boolean> DeleteMemberHandler(@RequestBody Member member,@RequestParam String key) throws MemberNotFoundException{
+		Boolean ans=memberservice.deleteMemberRecord(member, key);
 		return new ResponseEntity<Boolean>(ans,HttpStatus.ACCEPTED);
 		
 	}
 
 	@PutMapping("/Member")
-	public ResponseEntity<Member> UpdateMemberHandler(@RequestBody Member member) throws MemberNotFoundException{
-		Member memb=memberservice.updateMember(member);
+	public ResponseEntity<Member> UpdateMemberHandler(@RequestBody Member member,@RequestParam String key) throws MemberNotFoundException{
+		Member memb=memberservice.updateMember(member, key);
 		
 		return new ResponseEntity<Member>(member,HttpStatus.FOUND);
 	}
 	@PostMapping("/Member/{Number}")
-	public ResponseEntity<Member> AddMemberHandler(@RequestBody Member member,@PathVariable String Number) throws MemberNotFoundException{
+	public ResponseEntity<Member> AddMemberHandler(@RequestBody Member member,@PathVariable String Number,@RequestParam String key) throws MemberNotFoundException{
 		
-		Member m=memberservice.addMemberbyMobileNo(member, Number);
+		Member m=memberservice.addMemberbyMobileNo(member, Number, key);
 		
 		return new ResponseEntity<Member>(m,HttpStatus.CREATED);
 	}
