@@ -295,4 +295,37 @@ public class AdminController {
 		
 		return new ResponseEntity<Vaccine>(serviceVaccine.DeleteVaccine(vaccine,key),HttpStatus.OK);
 	}
+	
+	
+	//vaccine center service control
+	
+	
+	@GetMapping("/vaccination_centers")
+	public ResponseEntity<List<VaccinationCenter>> getVaccineCenters(@RequestParam String key) {
+		return new ResponseEntity<List<VaccinationCenter>>(vaccinationCenterService.allVaccineCenters(key), HttpStatus.OK);
+	}
+
+	@PostMapping("/vaccination_center")
+	public ResponseEntity<VaccinationCenter> addVaccineCenter(@RequestBody VaccinationCenter center,@RequestParam String key) {
+		return new ResponseEntity<VaccinationCenter>(vaccinationCenterService.addVaccineCenter(center,key),
+				HttpStatus.CREATED);
+	}
+
+	@GetMapping("/vaccination_center/{id}")
+	public ResponseEntity<VaccinationCenter> addVaccineCenter(@PathVariable("id") Integer id,@RequestParam String key) {
+		return new ResponseEntity<VaccinationCenter>(vaccinationCenterService.getVaccineCenter(id,key), HttpStatus.FOUND);
+	}
+
+	@PutMapping("/vaccination_center")
+	public ResponseEntity<VaccinationCenter> updateVaccineCenter(@RequestBody VaccinationCenter center,@RequestParam String key) {
+		return new ResponseEntity<VaccinationCenter>(vaccinationCenterService.updateVaccineCenter(center,key),
+				HttpStatus.OK);
+	}
+
+	@DeleteMapping("/vaccination_center")
+	public ResponseEntity<String> deleteVaccineCenter(@RequestBody VaccinationCenter center,@RequestParam String key) {
+		return new ResponseEntity<>("vaccine center deleted : " + vaccinationCenterService.deleteVaccineCenter(center,key),
+				HttpStatus.OK);
+	}
+
 }
