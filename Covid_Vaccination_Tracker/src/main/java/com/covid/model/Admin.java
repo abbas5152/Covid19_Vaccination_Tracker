@@ -25,20 +25,20 @@ public class Admin {
 	
 	@NotNull(message = "Customer Name ")
 	private String adminName ;
-//	
-//	@Size(min = 9  , max = 10 , message = "Please Enter valid mobile no ")
-//	@NotNull(message = "Mobile number is mandatory")
-//	@Pattern(regexp =  "^[7-9][0-9]9$")
-//	@NotEmpty(message = "Mobile number is mandatory")
-//	@Column(unique = true)
+	
+	@Size(min = 9  , max = 10 , message = "Please Enter valid mobile no ")
+	@NotNull(message = "Mobile number is mandatory")
+	@Pattern(regexp =  "^[7-9][0-9]9$")
+	@NotEmpty(message = "Mobile number is mandatory")
+	@Column(unique = true)
 	private String mobileNumber;
 	
-//	@NotNull(message = "Password is Mandatory")
-//	@Size(min = 8 ,max = 20)
+	@NotNull(message = "Password is Mandatory")
+	@Size(min = 8 ,max = 20)
 	private String password ;
 	
-//	@Email
-//	@NotNull(message = "Email is mandatory")
+	@Email
+	@NotNull(message = "Email is mandatory")
 	private String email ;
 
 }
