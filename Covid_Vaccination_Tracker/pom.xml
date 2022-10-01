@@ -34,6 +34,9 @@
 		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
 		
 		
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

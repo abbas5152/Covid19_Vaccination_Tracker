@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_gRVrAD7pEe2ZvJGrTENhQw" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_gRVrAT7pEe2ZvJGrTENhQw" bindingContexts="_gRVrCj7pEe2ZvJGrTENhQw">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList/>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_gRVrAT7pEe2ZvJGrTENhQw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_gYifMj7pEe2ZvJGrTENhQw" label="%trimmedwindow.label.eclipseSDK" x="58" y="56" width="1440" height="900">
@@ -11,6 +12,8 @@
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1664340815017"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;show_in_time/>"/>
 =======
+=======
+>>>>>>> Stashed changes
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AdharCard.java&quot; tooltip=&quot;src/main/java/com/covid/model/AdharCard.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/src/main/java/com/covid/model/AdharCard.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_gRVrAT7pEe2ZvJGrTENhQw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_gYifMj7pEe2ZvJGrTENhQw" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1386" height="788">
@@ -20,6 +23,9 @@
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1664340815017"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     <tags>topLevel</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_gYifMj7pEe2ZvJGrTENhQw" selectedElement="_gYifMz7pEe2ZvJGrTENhQw" horizontal="true">
@@ -83,6 +89,7 @@
           <tags>persp.showIn:org.eclipse.tm.terminal.view.ui.TerminalsView</tags>
           <tags>persp.viewSC:org.eclipse.ant.ui.views.AntView</tags>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7ZD7pEe2ZvJGrTENhQw" selectedElement="_gcE7ZT7pEe2ZvJGrTENhQw" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7ZT7pEe2ZvJGrTENhQw" containerData="2500" selectedElement="_gcE7Zj7pEe2ZvJGrTENhQw">
               <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7Zj7pEe2ZvJGrTENhQw" containerData="6000" selectedElement="_gcE7Zz7pEe2ZvJGrTENhQw">
@@ -91,12 +98,17 @@
                   <tags>active</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_gcE7aD7pEe2ZvJGrTENhQw" elementId="org.eclipse.jdt.ui.PackageExplorer" ref="_gcAC4D7pEe2ZvJGrTENhQw" closeable="true">
 =======
+=======
+>>>>>>> Stashed changes
           <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7ZD7pEe2ZvJGrTENhQw" selectedElement="_gcE7cD7pEe2ZvJGrTENhQw" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7ZT7pEe2ZvJGrTENhQw" toBeRendered="false" containerData="2500">
               <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7Zj7pEe2ZvJGrTENhQw" toBeRendered="false" containerData="6000">
                 <children xsi:type="basic:PartStack" xmi:id="_gcE7Zz7pEe2ZvJGrTENhQw" elementId="left" toBeRendered="false" containerData="6600">
                   <tags>org.eclipse.e4.primaryNavigationStack</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_gcE7aD7pEe2ZvJGrTENhQw" elementId="org.eclipse.jdt.ui.PackageExplorer" toBeRendered="false" ref="_gcAC4D7pEe2ZvJGrTENhQw" closeable="true">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                     <tags>View</tags>
                     <tags>categoryTag:Java</tags>
@@ -115,8 +127,13 @@
                   </children>
                 </children>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 <children xsi:type="basic:PartStack" xmi:id="_gcE7bD7pEe2ZvJGrTENhQw" elementId="org.springframework.ide.eclipse.boot.dash.views.BootDashViewMStack" containerData="3400" selectedElement="_gcE7bT7pEe2ZvJGrTENhQw">
                   <children xsi:type="advanced:Placeholder" xmi:id="_gcE7bT7pEe2ZvJGrTENhQw" elementId="org.springframework.ide.eclipse.boot.dash.views.BootDashView" ref="_gcE7YD7pEe2ZvJGrTENhQw" closeable="true">
+=======
+                <children xsi:type="basic:PartStack" xmi:id="_gcE7bD7pEe2ZvJGrTENhQw" elementId="org.springframework.ide.eclipse.boot.dash.views.BootDashViewMStack" toBeRendered="false" containerData="3400">
+                  <children xsi:type="advanced:Placeholder" xmi:id="_gcE7bT7pEe2ZvJGrTENhQw" elementId="org.springframework.ide.eclipse.boot.dash.views.BootDashView" toBeRendered="false" ref="_gcE7YD7pEe2ZvJGrTENhQw" closeable="true">
+>>>>>>> Stashed changes
 =======
                 <children xsi:type="basic:PartStack" xmi:id="_gcE7bD7pEe2ZvJGrTENhQw" elementId="org.springframework.ide.eclipse.boot.dash.views.BootDashViewMStack" toBeRendered="false" containerData="3400">
                   <children xsi:type="advanced:Placeholder" xmi:id="_gcE7bT7pEe2ZvJGrTENhQw" elementId="org.springframework.ide.eclipse.boot.dash.views.BootDashView" toBeRendered="false" ref="_gcE7YD7pEe2ZvJGrTENhQw" closeable="true">
@@ -134,6 +151,7 @@
               </children>
             </children>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7cD7pEe2ZvJGrTENhQw" containerData="7500">
               <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7cT7pEe2ZvJGrTENhQw" containerData="7500" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_gcE7cj7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_gb9moD7pEe2ZvJGrTENhQw"/>
@@ -141,12 +159,17 @@
                   <tags>org.eclipse.e4.secondaryNavigationStack</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_gcE7dD7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.views.ContentOutline" ref="_gcBRBj7pEe2ZvJGrTENhQw" closeable="true">
 =======
+=======
+>>>>>>> Stashed changes
             <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7cD7pEe2ZvJGrTENhQw" containerData="7500" selectedElement="_gcE7eD7pEe2ZvJGrTENhQw">
               <children xsi:type="basic:PartSashContainer" xmi:id="_gcE7cT7pEe2ZvJGrTENhQw" containerData="7500" selectedElement="_gcE7cj7pEe2ZvJGrTENhQw" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_gcE7cj7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_gb9moD7pEe2ZvJGrTENhQw"/>
                 <children xsi:type="basic:PartStack" xmi:id="_gcE7cz7pEe2ZvJGrTENhQw" elementId="right" toBeRendered="false" containerData="2500">
                   <tags>org.eclipse.e4.secondaryNavigationStack</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_gcE7dD7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.views.ContentOutline" toBeRendered="false" ref="_gcBRBj7pEe2ZvJGrTENhQw" closeable="true">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                     <tags>View</tags>
                     <tags>categoryTag:General</tags>
@@ -166,8 +189,14 @@
                 </children>
               </children>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
               <children xsi:type="basic:PartStack" xmi:id="_gcE7eD7pEe2ZvJGrTENhQw" elementId="bottom" containerData="2500" selectedElement="_gcE7eT7pEe2ZvJGrTENhQw">
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
+=======
+              <children xsi:type="basic:PartStack" xmi:id="_gcE7eD7pEe2ZvJGrTENhQw" elementId="bottom" containerData="2500" selectedElement="_gcE7ez7pEe2ZvJGrTENhQw">
+                <tags>org.eclipse.e4.secondaryDataStack</tags>
+                <tags>active</tags>
+>>>>>>> Stashed changes
 =======
               <children xsi:type="basic:PartStack" xmi:id="_gcE7eD7pEe2ZvJGrTENhQw" elementId="bottom" containerData="2500" selectedElement="_gcE7ez7pEe2ZvJGrTENhQw">
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
@@ -244,7 +273,11 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <sharedElements xsi:type="advanced:Area" xmi:id="_gb9moD7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.editorss">
+=======
+    <sharedElements xsi:type="advanced:Area" xmi:id="_gb9moD7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.editorss" selectedElement="_gb9moT7pEe2ZvJGrTENhQw">
+>>>>>>> Stashed changes
 =======
     <sharedElements xsi:type="advanced:Area" xmi:id="_gb9moD7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.editorss" selectedElement="_gb9moT7pEe2ZvJGrTENhQw">
 >>>>>>> Stashed changes
@@ -257,11 +290,17 @@
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.jdt.ui"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;&quot;>&#xA;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;>&#xA;&lt;xmlDefinedFilters>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.buildfolder&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.subProject&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.DeprecatedMembersFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/>&#xA;&lt;/xmlDefinedFilters>&#xA;&lt;/customFilters>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
       <tags>active</tags>
       <tags>activeOnClose</tags>
+=======
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;&quot;>&#xD;&#xA;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;>&#xD;&#xA;&lt;xmlDefinedFilters>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.buildfolder&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.subProject&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.DeprecatedMembersFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/xmlDefinedFilters>&#xD;&#xA;&lt;/customFilters>&#xD;&#xA;&lt;/view>"/>
+      <tags>View</tags>
+      <tags>categoryTag:Java</tags>
+>>>>>>> Stashed changes
 =======
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;&quot;>&#xD;&#xA;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;>&#xD;&#xA;&lt;xmlDefinedFilters>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.buildfolder&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.subProject&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.DeprecatedMembersFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/xmlDefinedFilters>&#xD;&#xA;&lt;/customFilters>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
@@ -289,7 +328,11 @@
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.ProblemsView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;/view>"/>
+=======
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+>>>>>>> Stashed changes
 =======
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
 >>>>>>> Stashed changes
@@ -305,9 +348,12 @@
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.jdt.internal.ui.infoviews.JavadocView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.jdt.ui"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
 =======
+=======
+>>>>>>> Stashed changes
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
@@ -316,15 +362,21 @@
         <tags>menuContribution:menu</tags>
       </menus>
       <toolbar xmi:id="_zV444UB8Ee2YRLjuNqhZBA" elementId="org.eclipse.jdt.ui.JavadocView" visible="false"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_gcBRAT7pEe2ZvJGrTENhQw" elementId="org.eclipse.jdt.ui.SourceView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Declaration" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/eview16/source.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.jdt.internal.ui.infoviews.SourceView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.jdt.ui"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
 =======
+=======
+>>>>>>> Stashed changes
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
@@ -335,6 +387,9 @@
         <tags>menuContribution:menu</tags>
       </menus>
       <toolbar xmi:id="_zycSAUB8Ee2YRLjuNqhZBA" elementId="org.eclipse.jdt.ui.SourceView" visible="false"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_gcBRAj7pEe2ZvJGrTENhQw" elementId="org.eclipse.search.ui.views.SearchView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Search" iconURI="platform:/plugin/org.eclipse.search/icons/full/eview16/searchres.png" tooltip="" closeable="true">
@@ -365,7 +420,11 @@
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.contentoutline.ContentOutline"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
+=======
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+>>>>>>> Stashed changes
 =======
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
 >>>>>>> Stashed changes
@@ -405,7 +464,11 @@
       <persistedState key="originalCompatibilityViewClass" value="org.springframework.ide.eclipse.boot.dash.views.BootDashTreeView"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.springframework.ide.eclipse.boot.dash"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
+=======
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+>>>>>>> Stashed changes
 =======
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
 >>>>>>> Stashed changes
@@ -437,7 +500,11 @@
       <children xsi:type="menu:ToolBar" xmi:id="_gZFRwD7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <children xsi:type="menu:HandledToolItem" xmi:id="_gZHG8D7pEe2ZvJGrTENhQw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_gRifhj7pEe2ZvJGrTENhQw"/>
+=======
+        <children xsi:type="menu:HandledToolItem" xmi:id="_hSKcwEGEEe2sENfe-Sjf3w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_gRifhj7pEe2ZvJGrTENhQw"/>
+>>>>>>> Stashed changes
 =======
         <children xsi:type="menu:HandledToolItem" xmi:id="_hSKcwEGEEe2sENfe-Sjf3w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_gRifhj7pEe2ZvJGrTENhQw"/>
 >>>>>>> Stashed changes
@@ -454,6 +521,12 @@
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_gZFRxT7pEe2ZvJGrTENhQw" elementId="additions" toBeRendered="false"/>
       </children>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+      <children xsi:type="menu:ToolBar" xmi:id="_QwMlUEB-Ee2aNcIzUbT-vw" elementId="org.eclipse.ui.edit.text.actionSet.presentation" visible="false">
+        <tags>Draggable</tags>
+      </children>
+>>>>>>> Stashed changes
 =======
       <children xsi:type="menu:ToolBar" xmi:id="_QwMlUEB-Ee2aNcIzUbT-vw" elementId="org.eclipse.ui.edit.text.actionSet.presentation" visible="false">
         <tags>Draggable</tags>
@@ -475,7 +548,11 @@
       <children xsi:type="menu:ToolBar" xmi:id="_gZFRyD7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <children xsi:type="menu:HandledToolItem" xmi:id="_gZHG_T7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_gRh5Az7pEe2ZvJGrTENhQw"/>
+=======
+        <children xsi:type="menu:HandledToolItem" xmi:id="_hSRxgEGEEe2sENfe-Sjf3w" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_gRh5Az7pEe2ZvJGrTENhQw"/>
+>>>>>>> Stashed changes
 =======
         <children xsi:type="menu:HandledToolItem" xmi:id="_hSRxgEGEEe2sENfe-Sjf3w" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_gRh5Az7pEe2ZvJGrTENhQw"/>
 >>>>>>> Stashed changes
@@ -513,6 +590,7 @@
       </children>
     </trimBars>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <trimBars xmi:id="_gRVrBz7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.trim.vertical1" contributorURI="platform:/plugin/org.eclipse.platform" side="Left"/>
     <trimBars xmi:id="_gRVrCD7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.platform" side="Right"/>
   </children>
@@ -534,6 +612,8 @@
     <bindings xmi:id="_gRsQfD7pEe2ZvJGrTENhQw" keySequence="COMMAND+F10" command="_gRgqLD7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRtecj7pEe2ZvJGrTENhQw" keySequence="ALT+COMMAND+SHIFT+F9" command="_gRhRhD7pEe2ZvJGrTENhQw"/>
 =======
+=======
+>>>>>>> Stashed changes
     <trimBars xmi:id="_gRVrBz7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.trim.vertical1" contributorURI="platform:/plugin/org.eclipse.platform" toBeRendered="false" side="Left">
       <children xsi:type="menu:ToolControl" xmi:id="_0K5OQEB8Ee2YRLjuNqhZBA" elementId="org.eclipse.ui.editorss(IDEWindow).(org.eclipse.jdt.ui.JavaPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
@@ -551,6 +631,9 @@
     <bindings xmi:id="_gRrpYD7pEe2ZvJGrTENhQw" keySequence="CTRL+SHIFT+SPACE" command="_gRgqvz7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRsQYz7pEe2ZvJGrTENhQw" keySequence="ALT+PAGE_UP" command="_gRhRwj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRsQZD7pEe2ZvJGrTENhQw" keySequence="ALT+PAGE_DOWN" command="_gRh41D7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     <bindings xmi:id="_gRtecz7pEe2ZvJGrTENhQw" keySequence="CTRL+PAGE_UP" command="_gRifnT7pEe2ZvJGrTENhQw">
       <tags>platform:cocoa</tags>
@@ -561,6 +644,7 @@
     <bindings xmi:id="_gRtedT7pEe2ZvJGrTENhQw" keySequence="ALT+SHIFT+F1" command="_gRgqYj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRtedj7pEe2ZvJGrTENhQw" keySequence="ALT+SHIFT+F2" command="_gRh4vT7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRtedz7pEe2ZvJGrTENhQw" keySequence="ALT+SHIFT+F3" command="_gRifkT7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <bindings xmi:id="_gRteeT7pEe2ZvJGrTENhQw" keySequence="COMMAND+X" command="_gRhRQj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRteej7pEe2ZvJGrTENhQw" keySequence="COMMAND+Z" command="_gRhRPD7pEe2ZvJGrTENhQw"/>
@@ -638,6 +722,8 @@
       <parameters xmi:id="_gRrpSj7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.team.ui.GenericHistoryView"/>
     </bindings>
 =======
+=======
+>>>>>>> Stashed changes
     <bindings xmi:id="_R2GvYEB8Ee2jvvkMZ-MzKA" keySequence="CTRL+1" command="_gRgqpT7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R2JLoEB8Ee2jvvkMZ-MzKA" keySequence="CTRL+6" command="_gRgqyj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R2Jys0B8Ee2jvvkMZ-MzKA" keySequence="CTRL+SHIFT+I" command="_gRgqhz7pEe2ZvJGrTENhQw"/>
@@ -660,13 +746,19 @@
   </bindingTables>
   <bindingTables xmi:id="_gRp0ED7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.contexts.window" bindingContext="_gRVrCz7pEe2ZvJGrTENhQw">
     <bindings xmi:id="_gRrpRD7pEe2ZvJGrTENhQw" keySequence="ALT+CTRL+SHIFT+T" command="_gRgqKz7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     <bindings xmi:id="_gRrpTz7pEe2ZvJGrTENhQw" keySequence="ALT+CTRL+B" command="_gRh4zT7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRrpVD7pEe2ZvJGrTENhQw" keySequence="ALT+CTRL+P" command="_gRgqUT7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRrpVz7pEe2ZvJGrTENhQw" keySequence="ALT+CTRL+T" command="_gRh4QD7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRrpWD7pEe2ZvJGrTENhQw" keySequence="ALT+CTRL+H" command="_gRgqJj7pEe2ZvJGrTENhQw"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <bindings xmi:id="_gRrpWT7pEe2ZvJGrTENhQw" keySequence="ALT+COMMAND+SHIFT+A" command="_gRh43z7pEe2ZvJGrTENhQw"/>
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     <bindings xmi:id="_gRrpWj7pEe2ZvJGrTENhQw" keySequence="CTRL+Q" command="_gRiflz7pEe2ZvJGrTENhQw"/>
@@ -675,6 +767,7 @@
       <tags>platform:cocoa</tags>
     </bindings>
     <bindings xmi:id="_gRrpXz7pEe2ZvJGrTENhQw" keySequence="ALT+SHIFT+P" command="_gRh4vz7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <bindings xmi:id="_gRrpZD7pEe2ZvJGrTENhQw" keySequence="ALT+COMMAND+SHIFT+L" command="_gRh4ez7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRrpZT7pEe2ZvJGrTENhQw" keySequence="ALT+COMMAND+SHIFT+M" command="_gRif2z7pEe2ZvJGrTENhQw"/>
@@ -713,10 +806,17 @@
     <bindings xmi:id="_gRsQbT7pEe2ZvJGrTENhQw" keySequence="ALT+F7" command="_gRh4bj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRsQdT7pEe2ZvJGrTENhQw" keySequence="ALT+F5" command="_gRhRgz7pEe2ZvJGrTENhQw"/>
 >>>>>>> Stashed changes
+=======
+    <bindings xmi:id="_gRsQaj7pEe2ZvJGrTENhQw" keySequence="SHIFT+F2" command="_gRh4lj7pEe2ZvJGrTENhQw"/>
+    <bindings xmi:id="_gRsQaz7pEe2ZvJGrTENhQw" keySequence="SHIFT+F5" command="_gRhRmT7pEe2ZvJGrTENhQw"/>
+    <bindings xmi:id="_gRsQbT7pEe2ZvJGrTENhQw" keySequence="ALT+F7" command="_gRh4bj7pEe2ZvJGrTENhQw"/>
+    <bindings xmi:id="_gRsQdT7pEe2ZvJGrTENhQw" keySequence="ALT+F5" command="_gRhRgz7pEe2ZvJGrTENhQw"/>
+>>>>>>> Stashed changes
     <bindings xmi:id="_gRs3bT7pEe2ZvJGrTENhQw" keySequence="F2" command="_gRgDSD7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3cT7pEe2ZvJGrTENhQw" keySequence="F3" command="_gRgqnj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3dT7pEe2ZvJGrTENhQw" keySequence="F4" command="_gRgDUT7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3eT7pEe2ZvJGrTENhQw" keySequence="F5" command="_gRhRXT7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <bindings xmi:id="_gRs3ez7pEe2ZvJGrTENhQw" keySequence="COMMAND+F6" command="_gRgqUj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3hD7pEe2ZvJGrTENhQw" keySequence="ALT+CTRL+ARROW_LEFT" command="_gRiflz7pEe2ZvJGrTENhQw"/>
@@ -870,6 +970,8 @@
     <bindings xmi:id="_gRv6sD7pEe2ZvJGrTENhQw" keySequence="ALT+SHIFT+D B" command="_gRif4j7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRv6sT7pEe2ZvJGrTENhQw" keySequence="ALT+SHIFT+D R" command="_gRhRsz7pEe2ZvJGrTENhQw"/>
 =======
+=======
+>>>>>>> Stashed changes
     <bindings xmi:id="_gRs3hD7pEe2ZvJGrTENhQw" keySequence="ALT+CTRL+ARROW_LEFT" command="_gRiflz7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3hT7pEe2ZvJGrTENhQw" keySequence="ALT+CTRL+ARROW_RIGHT" command="_gRgqZj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3kT7pEe2ZvJGrTENhQw" keySequence="ALT+SHIFT+X M" command="_gRhRjz7pEe2ZvJGrTENhQw"/>
@@ -1013,6 +1115,9 @@
     <bindings xmi:id="_R3AuUEB8Ee2jvvkMZ-MzKA" keySequence="ALT+SHIFT+D O" command="_gRh4Sj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R3AuUUB8Ee2jvvkMZ-MzKA" keySequence="ALT+SHIFT+D P" command="_gRifgj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R3AuUkB8Ee2jvvkMZ-MzKA" keySequence="ALT+SHIFT+D Q" command="_gRhRnz7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   </bindingTables>
   <bindingTables xmi:id="_gRrpSz7pEe2ZvJGrTENhQw" elementId="org.eclipse.core.runtime.xml" bindingContext="_gRjtiz7pEe2ZvJGrTENhQw">
@@ -1021,6 +1126,7 @@
   </bindingTables>
   <bindingTables xmi:id="_gRrpTT7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.textEditorScope" bindingContext="_gRjtcj7pEe2ZvJGrTENhQw">
     <bindings xmi:id="_gRrpTj7pEe2ZvJGrTENhQw" keySequence="CTRL+SHIFT+Q" command="_gRgqjT7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <bindings xmi:id="_gRrpUD7pEe2ZvJGrTENhQw" keySequence="CTRL+." command="_gRifzj7pEe2ZvJGrTENhQw">
       <tags>platform:cocoa</tags>
@@ -1174,6 +1280,8 @@
     <bindings xmi:id="_gRsQbj7pEe2ZvJGrTENhQw" keySequence="COMMAND+SHIFT+ARROW_UP" command="_gRgqgD7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRsQbz7pEe2ZvJGrTENhQw" keySequence="COMMAND+SHIFT+ARROW_DOWN" command="_gRhRoz7pEe2ZvJGrTENhQw"/>
 =======
+=======
+>>>>>>> Stashed changes
     <bindings xmi:id="_gRsQVz7pEe2ZvJGrTENhQw" keySequence="ALT+ARROW_UP" command="_gRigFj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRsQWT7pEe2ZvJGrTENhQw" keySequence="ALT+ARROW_DOWN" command="_gRh43T7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3Zz7pEe2ZvJGrTENhQw" keySequence="INSERT" command="_gRh4hD7pEe2ZvJGrTENhQw"/>
@@ -1256,6 +1364,9 @@
     <bindings xmi:id="_R2-SE0B8Ee2jvvkMZ-MzKA" keySequence="CTRL+2 M" command="_gRhRYD7pEe2ZvJGrTENhQw"/>
   </bindingTables>
   <bindingTables xmi:id="_gRrpXT7pEe2ZvJGrTENhQw" elementId="org.eclipse.wst.sse.ui.structuredTextEditorScope" bindingContext="_gRjthz7pEe2ZvJGrTENhQw">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     <bindings xmi:id="_gRs3dD7pEe2ZvJGrTENhQw" keySequence="F3" command="_gRh4ZT7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3iz7pEe2ZvJGrTENhQw" keySequence="CTRL+SHIFT+ARROW_UP" command="_gRgqgD7pEe2ZvJGrTENhQw">
@@ -1264,6 +1375,7 @@
     <bindings xmi:id="_gRs3jD7pEe2ZvJGrTENhQw" keySequence="CTRL+SHIFT+ARROW_DOWN" command="_gRhRoz7pEe2ZvJGrTENhQw">
       <tags>platform:cocoa</tags>
     </bindings>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <bindings xmi:id="_gRs3jT7pEe2ZvJGrTENhQw" keySequence="CTRL+SHIFT+ARROW_LEFT" command="_gRgqJD7pEe2ZvJGrTENhQw">
       <tags>platform:cocoa</tags>
@@ -1293,6 +1405,8 @@
     <bindings xmi:id="_gRrpYj7pEe2ZvJGrTENhQw" keySequence="CTRL+D" command="_gRif9T7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRusuD7pEe2ZvJGrTENhQw" keySequence="COMMAND+R" command="_gRh4cD7pEe2ZvJGrTENhQw"/>
 =======
+=======
+>>>>>>> Stashed changes
     <bindings xmi:id="_gRs3lD7pEe2ZvJGrTENhQw" keySequence="ALT+SHIFT+ARROW_UP" command="_gRh42T7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3lT7pEe2ZvJGrTENhQw" keySequence="ALT+SHIFT+ARROW_DOWN" command="_gRh47D7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R2FhQkB8Ee2jvvkMZ-MzKA" keySequence="CTRL+SHIFT+P" command="_gRh4aD7pEe2ZvJGrTENhQw"/>
@@ -1312,12 +1426,16 @@
     <bindings xmi:id="_R2nswUB8Ee2jvvkMZ-MzKA" keySequence="CTRL+Z" command="_gRif9T7pEe2ZvJGrTENhQw">
       <tags>platform:win32</tags>
     </bindings>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   </bindingTables>
   <bindingTables xmi:id="_gRsQVT7pEe2ZvJGrTENhQw" elementId="org.eclipse.tm.terminal.EditContext" bindingContext="_gRjtcD7pEe2ZvJGrTENhQw">
     <bindings xmi:id="_gRsQVj7pEe2ZvJGrTENhQw" keySequence="ALT+ARROW_UP" command="_gRgDGT7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRsQYT7pEe2ZvJGrTENhQw" keySequence="ALT+ARROW_RIGHT" command="_gRif1z7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRsQZj7pEe2ZvJGrTENhQw" keySequence="SHIFT+INSERT" command="_gRhRZz7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <bindings xmi:id="_gRs3Zj7pEe2ZvJGrTENhQw" keySequence="COMMAND+INSERT" command="_gRh5Bz7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRuFgz7pEe2ZvJGrTENhQw" keySequence="COMMAND+SHIFT+V" command="_gRhRZz7pEe2ZvJGrTENhQw"/>
@@ -1333,10 +1451,16 @@
     <bindings xmi:id="_R2WnAEB8Ee2jvvkMZ-MzKA" keySequence="CTRL+SHIFT+C" command="_gRh5Bz7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R2w2sUB8Ee2jvvkMZ-MzKA" keySequence="CTRL+INSERT" command="_gRh5Bz7pEe2ZvJGrTENhQw"/>
 >>>>>>> Stashed changes
+=======
+    <bindings xmi:id="_R2Ikk0B8Ee2jvvkMZ-MzKA" keySequence="CTRL+SHIFT+V" command="_gRhRZz7pEe2ZvJGrTENhQw"/>
+    <bindings xmi:id="_R2WnAEB8Ee2jvvkMZ-MzKA" keySequence="CTRL+SHIFT+C" command="_gRh5Bz7pEe2ZvJGrTENhQw"/>
+    <bindings xmi:id="_R2w2sUB8Ee2jvvkMZ-MzKA" keySequence="CTRL+INSERT" command="_gRh5Bz7pEe2ZvJGrTENhQw"/>
+>>>>>>> Stashed changes
   </bindingTables>
   <bindingTables xmi:id="_gRsQaD7pEe2ZvJGrTENhQw" elementId="org.eclipse.ant.ui.AntEditorScope" bindingContext="_gRjtkj7pEe2ZvJGrTENhQw">
     <bindings xmi:id="_gRsQaT7pEe2ZvJGrTENhQw" keySequence="SHIFT+F2" command="_gRh4dz7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRs3cD7pEe2ZvJGrTENhQw" keySequence="F3" command="_gRgDKj7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <bindings xmi:id="_gRuFpD7pEe2ZvJGrTENhQw" keySequence="ALT+COMMAND+R" command="_gRgDUD7pEe2ZvJGrTENhQw">
       <tags>platform:cocoa</tags>
@@ -1363,6 +1487,8 @@
     <bindings xmi:id="_gRs3ej7pEe2ZvJGrTENhQw" keySequence="F6" command="_gRhReT7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRustz7pEe2ZvJGrTENhQw" keySequence="COMMAND+R" command="_gRh4ST7pEe2ZvJGrTENhQw"/>
 =======
+=======
+>>>>>>> Stashed changes
     <bindings xmi:id="_R2YcMUB8Ee2jvvkMZ-MzKA" keySequence="CTRL+SHIFT+F" command="_gRifyD7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R2hmIUB8Ee2jvvkMZ-MzKA" keySequence="ALT+SHIFT+R" command="_gRgDUD7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R2nFtEB8Ee2jvvkMZ-MzKA" keySequence="ALT+SHIFT+O" command="_gRgDIz7pEe2ZvJGrTENhQw"/>
@@ -1381,6 +1507,9 @@
     <bindings xmi:id="_R2bfgkB8Ee2jvvkMZ-MzKA" keySequence="CTRL+R" command="_gRh4ST7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R2w2s0B8Ee2jvvkMZ-MzKA" keySequence="CTRL+F2" command="_gRifZj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R2xdwUB8Ee2jvvkMZ-MzKA" keySequence="CTRL+F5" command="_gRif0z7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   </bindingTables>
   <bindingTables xmi:id="_gRs3aD7pEe2ZvJGrTENhQw" elementId="org.eclipse.mylyn.internal.wikitext.ui.editor.basicMarkupSourceContext" bindingContext="_gRjthT7pEe2ZvJGrTENhQw">
@@ -1392,7 +1521,11 @@
   <bindingTables xmi:id="_gRs3cj7pEe2ZvJGrTENhQw" elementId="org.eclipse.ui.genericeditor.genericEditorContext" bindingContext="_gRjtfT7pEe2ZvJGrTENhQw">
     <bindings xmi:id="_gRs3cz7pEe2ZvJGrTENhQw" keySequence="F3" command="_gRifmD7pEe2ZvJGrTENhQw"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <bindings xmi:id="_gRuspj7pEe2ZvJGrTENhQw" keySequence="COMMAND+SHIFT+G" command="_gRifqT7pEe2ZvJGrTENhQw"/>
+=======
+    <bindings xmi:id="_R2ZDQUB8Ee2jvvkMZ-MzKA" keySequence="CTRL+SHIFT+G" command="_gRifqT7pEe2ZvJGrTENhQw"/>
+>>>>>>> Stashed changes
 =======
     <bindings xmi:id="_R2ZDQUB8Ee2jvvkMZ-MzKA" keySequence="CTRL+SHIFT+G" command="_gRifqT7pEe2ZvJGrTENhQw"/>
 >>>>>>> Stashed changes
@@ -1402,8 +1535,13 @@
   </bindingTables>
   <bindingTables xmi:id="_gRs3fD7pEe2ZvJGrTENhQw" elementId="org.eclipse.egit.ui.RepositoriesView" bindingContext="_gRjtmD7pEe2ZvJGrTENhQw">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <bindings xmi:id="_gRs3fT7pEe2ZvJGrTENhQw" keySequence="COMMAND+ARROW_LEFT" command="_gRgqOz7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_gRvTuz7pEe2ZvJGrTENhQw" keySequence="COMMAND+C" command="_gRgqtj7pEe2ZvJGrTENhQw"/>
+=======
+    <bindings xmi:id="_R2lQgkB8Ee2jvvkMZ-MzKA" keySequence="CTRL+C" command="_gRgqtj7pEe2ZvJGrTENhQw"/>
+    <bindings xmi:id="_R2yE0EB8Ee2jvvkMZ-MzKA" keySequence="CTRL+ARROW_LEFT" command="_gRgqOz7pEe2ZvJGrTENhQw"/>
+>>>>>>> Stashed changes
 =======
     <bindings xmi:id="_R2lQgkB8Ee2jvvkMZ-MzKA" keySequence="CTRL+C" command="_gRgqtj7pEe2ZvJGrTENhQw"/>
     <bindings xmi:id="_R2yE0EB8Ee2jvvkMZ-MzKA" keySequence="CTRL+ARROW_LEFT" command="_gRgqOz7pEe2ZvJGrTENhQw"/>
@@ -1429,6 +1567,7 @@
     <bindings xmi:id="_gRussD7pEe2ZvJGrTENhQw" keySequence="ALT+N" command="_gRh4VD7pEe2ZvJGrTENhQw"/>
   </bindingTables>
   <bindingTables xmi:id="_gRtelD7pEe2ZvJGrTENhQw" elementId="org.eclipse.jdt.ui.classFileEditorScope" bindingContext="_gRjtfj7pEe2ZvJGrTENhQw">
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <bindings xmi:id="_gRtelT7pEe2ZvJGrTENhQw" keySequence="COMMAND+1" command="_gRigBD7pEe2ZvJGrTENhQw"/>
   </bindingTables>
@@ -1478,6 +1617,8 @@
   <bindingTables xmi:id="_gRvTvD7pEe2ZvJGrTENhQw" elementId="org.eclipse.egit.ui.ReflogView" bindingContext="_gRjtgT7pEe2ZvJGrTENhQw">
     <bindings xmi:id="_gRvTvT7pEe2ZvJGrTENhQw" keySequence="COMMAND+C" command="_gRgqUz7pEe2ZvJGrTENhQw"/>
 =======
+=======
+>>>>>>> Stashed changes
     <bindings xmi:id="_R2GIVEB8Ee2jvvkMZ-MzKA" keySequence="CTRL+1" command="_gRigBD7pEe2ZvJGrTENhQw"/>
   </bindingTables>
   <bindingTables xmi:id="_gRtemj7pEe2ZvJGrTENhQw" elementId="org.eclipse.jdt.ui.breadcrumbEditorScope" bindingContext="_gRjtgj7pEe2ZvJGrTENhQw">
@@ -1523,15 +1664,22 @@
   </bindingTables>
   <bindingTables xmi:id="_gRvTvD7pEe2ZvJGrTENhQw" elementId="org.eclipse.egit.ui.ReflogView" bindingContext="_gRjtgT7pEe2ZvJGrTENhQw">
     <bindings xmi:id="_R2lQg0B8Ee2jvvkMZ-MzKA" keySequence="CTRL+C" command="_gRgqUz7pEe2ZvJGrTENhQw"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   </bindingTables>
   <bindingTables xmi:id="_gRvT0T7pEe2ZvJGrTENhQw" elementId="org.eclipse.debug.ui.BreakpointView" bindingContext="_gRjtcT7pEe2ZvJGrTENhQw">
     <bindings xmi:id="_gRvT0j7pEe2ZvJGrTENhQw" keySequence="ALT+CR" command="_gRhR2z7pEe2ZvJGrTENhQw"/>
   </bindingTables>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <bindingTables xmi:id="_gSWXpj7pEe2ZvJGrTENhQw" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_gRVrDT7pEe2ZvJGrTENhQw">
     <bindings xmi:id="_gSWXpz7pEe2ZvJGrTENhQw" keySequence="M1+W" command="_gSWXpD7pEe2ZvJGrTENhQw"/>
   </bindingTables>
+=======
+  <bindingTables xmi:id="_gSWXpj7pEe2ZvJGrTENhQw" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_gRVrDT7pEe2ZvJGrTENhQw"/>
+>>>>>>> Stashed changes
 =======
   <bindingTables xmi:id="_gSWXpj7pEe2ZvJGrTENhQw" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_gRVrDT7pEe2ZvJGrTENhQw"/>
 >>>>>>> Stashed changes
@@ -1659,6 +1807,7 @@
   <rootContext xmi:id="_gb_b5j7pEe2ZvJGrTENhQw" elementId="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" name="Auto::org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
   <rootContext xmi:id="_gb_b6D7pEe2ZvJGrTENhQw" elementId="org.springsource.ide.eclipse.commons.launch.actionSet" name="Auto::org.springsource.ide.eclipse.commons.launch.actionSet"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <descriptors xmi:id="_gST7YD7pEe2ZvJGrTENhQw" elementId="org.eclipse.pde.spy.preferences.parts.PreferenceSpyPart" contributorURI="platform:/plugin/org.eclipse.pde.spy.preferences" label="Preference Spy" iconURI="platform:/plugin/org.eclipse.pde.spy.preferences/$nl$/icons/preference_spy.png" closeable="true" contributionURI="bundleclass://org.eclipse.pde.spy.preferences/org.eclipse.pde.spy.preferences.parts.PreferenceSpyPart" description="Spy to display preferences">
     <persistedState key="perstistState" value="false"/>
     <tags>Spy</tags>
@@ -1682,6 +1831,8 @@
       </children>
       <children xsi:type="menu:HandledToolItem" xmi:id="_gST7cD7pEe2ZvJGrTENhQw" elementId="org.eclipse.pde.spy.preferences.handledtoolitem.removeall" contributorURI="platform:/plugin/org.eclipse.pde.spy.preferences" iconURI="platform:/plugin/org.eclipse.pde.spy.preferences/icons/removeall_co.png">
 =======
+=======
+>>>>>>> Stashed changes
   <descriptors xmi:id="_gwq5QEGEEe2sENfe-Sjf3w" elementId="org.eclipse.pde.spy.preferences.parts.PreferenceSpyPart" contributorURI="platform:/plugin/org.eclipse.pde.spy.preferences" label="Preference Spy" iconURI="platform:/plugin/org.eclipse.pde.spy.preferences/$nl$/icons/preference_spy.png" closeable="true" contributionURI="bundleclass://org.eclipse.pde.spy.preferences/org.eclipse.pde.spy.preferences.parts.PreferenceSpyPart" description="Spy to display preferences">
     <persistedState key="perstistState" value="false"/>
     <tags>Spy</tags>
@@ -1704,6 +1855,9 @@
         <command href="platform:/plugin/org.eclipse.pde.spy.preferences/fragment.e4xmi#_iGEkYGxiEeSQ7v0akw7aRA"/>
       </children>
       <children xsi:type="menu:HandledToolItem" xmi:id="_gwq5UEGEEe2sENfe-Sjf3w" elementId="org.eclipse.pde.spy.preferences.handledtoolitem.removeall" contributorURI="platform:/plugin/org.eclipse.pde.spy.preferences" iconURI="platform:/plugin/org.eclipse.pde.spy.preferences/icons/removeall_co.png">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         <command href="platform:/plugin/org.eclipse.pde.spy.preferences/fragment.e4xmi#_eBGTEGxiEeSQ7v0akw7aRA"/>
       </children>
@@ -3164,6 +3318,10 @@
   <commands xmi:id="_gYDXBz7pEe2ZvJGrTENhQw" elementId="AUTOGEN:::org.eclipse.jdt.debug.ui.DisplayViewActions/org.eclipse.jdt.debug.ui.displayViewToolbar.Inspect" commandName="Inspect" description="Inspect Result of Evaluating Selected Text" category="_gRfcJT7pEe2ZvJGrTENhQw"/>
   <commands xmi:id="_gYDXCD7pEe2ZvJGrTENhQw" elementId="AUTOGEN:::org.eclipse.pde.ui.logViewActions/org.eclipse.jdt.debug.ui.LogViewActions.showStackTrace" commandName="Show Stack Trace in Console View" description="Show Stack Trace in Console View" category="_gRfcJT7pEe2ZvJGrTENhQw"/>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+  <commands xmi:id="_R1CYYEB8Ee2jvvkMZ-MzKA" elementId="org.springframework.tooling.boot.ls.UpgradeToBoot3" commandName="Upgrade to Boot 3" description="Upgrade Spring Boot 2.x prohect to Spring Boot 3.x" category="_gRfcFj7pEe2ZvJGrTENhQw"/>
+>>>>>>> Stashed changes
 =======
   <commands xmi:id="_R1CYYEB8Ee2jvvkMZ-MzKA" elementId="org.springframework.tooling.boot.ls.UpgradeToBoot3" commandName="Upgrade to Boot 3" description="Upgrade Spring Boot 2.x prohect to Spring Boot 3.x" category="_gRfcFj7pEe2ZvJGrTENhQw"/>
 >>>>>>> Stashed changes

@@ -18,7 +18,10 @@
 	</properties>
 	<dependencies>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 	
 	<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -26,6 +29,9 @@
 			<version>2.7.2</version>
 		</dependency>
 		
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
