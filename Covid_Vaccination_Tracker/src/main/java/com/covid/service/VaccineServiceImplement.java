@@ -6,26 +6,53 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.covid.exception.LoginException;
 import com.covid.exception.VaccineNotFoundException;
+import com.covid.model.Admin;
+import com.covid.model.AdminLoginSession;
+import com.covid.model.CustomerLoginSession;
 import com.covid.model.Vaccine;
+import com.covid.repo.AdminLoginSessionDao;
+import com.covid.repo.CustomerLoginSessionDao;
 import com.covid.repo.VaccineDao;
 
 @Service
 public class VaccineServiceImplement implements VaccineService {
-
+     
+	@Autowired
+	  private AdminLoginSessionDao daoAdminLSes;
+	
+	private CustomerLoginSessionDao daoCLS;
+	
 	     @Autowired
 	      private VaccineDao daoVaccine;
 	@Override
-	public Vaccine addVaccine(Vaccine vaccine) throws VaccineNotFoundException {
+	public Vaccine addVaccine(Vaccine vaccine,String key) throws VaccineNotFoundException {
+		
+		      AdminLoginSession optAdminses= daoAdminLSes.findByUuid(key);
+//		  Optional<CustomerLoginSession> optCustLoSes= Optional.of(daoCLS.findByUuid(key));
+		      
+		      if(optAdminses==null)
+		      {
+		    	   throw new LoginException("Unathrosied access denied..");
+		      }
 		      
 		              Vaccine Savedvaccine=   daoVaccine.save(vaccine);
 		              
 		              return Savedvaccine;
 	}
 	@Override
-	public List<Vaccine> getAllVaccine() throws VaccineNotFoundException {
+	public List<Vaccine> getAllVaccine(String key) throws VaccineNotFoundException {
 		    List<Vaccine> allVaccine= daoVaccine.findAll();
 		    
+		    AdminLoginSession optAdminses= daoAdminLSes.findByUuid(key);
+			  CustomerLoginSession optCustLoSes= daoCLS.findByUuid(key);
+			      
+			      if(optAdminses==null && optCustLoSes==null)
+			      {
+			    	   throw new LoginException("Unathrosied access denied..");
+			      }
+		      
 		    if(allVaccine.size()>0)
 		    {
 		    	return allVaccine;
@@ -34,8 +61,16 @@ public class VaccineServiceImplement implements VaccineService {
 		    throw new VaccineNotFoundException("Vaccine not found..");
 	}
 	@Override
-	public List<Vaccine> getVaccineByVccineName(String vaccineName) throws VaccineNotFoundException {
+	public List<Vaccine> getVaccineByVccineName(String vaccineName,String key) throws VaccineNotFoundException {
+		    
+		  AdminLoginSession optAdminses= daoAdminLSes.findByUuid(key);
+
 		      
+		      if(optAdminses==null)
+		      {
+		    	   throw new LoginException("Unathrosied access denied..");
+		      }
+		
 		          List<Vaccine> vaccinesbyName= daoVaccine.findByVaccineName(vaccineName);
 		          
 		          if(vaccinesbyName.size()>0) {
@@ -46,8 +81,15 @@ public class VaccineServiceImplement implements VaccineService {
 		          throw new VaccineNotFoundException("This vaccine doesn't exist in vaccine list..");
 	}
 	@Override
-	public Vaccine getVaccineById(Integer vaccineId) throws VaccineNotFoundException {
+	public Vaccine getVaccineById(Integer vaccineId,String key) throws VaccineNotFoundException {
 		      
+		 AdminLoginSession optAdminses= daoAdminLSes.findByUuid(key);
+
+	      
+	      if(optAdminses==null)
+	      {
+	    	   throw new LoginException("Unathrosied access denied..");
+	      }
 		        Optional<Vaccine> opt=   daoVaccine.findById(vaccineId);
 		        
 		        if(opt.isPresent()) {
@@ -58,7 +100,15 @@ public class VaccineServiceImplement implements VaccineService {
 		        throw new VaccineNotFoundException("Vaccine can not find with this Id Number - "+ vaccineId);
 	}
 	@Override
-	public Vaccine updateVaccine(Vaccine vaccine) throws VaccineNotFoundException {
+	public Vaccine updateVaccine(Vaccine vaccine,String key) throws VaccineNotFoundException {
+		
+		 AdminLoginSession optAdminses= daoAdminLSes.findByUuid(key);
+
+	      
+	      if(optAdminses==null)
+	      {
+	    	   throw new LoginException("Unathrosied access denied..");
+	      }
 		      
 		       Optional<Vaccine> update_opt= daoVaccine.findById(vaccine.getVaccineId());
 		       
@@ -72,7 +122,15 @@ public class VaccineServiceImplement implements VaccineService {
 		       return update_opt.get();
 	}
 	@Override
-	public Vaccine DeleteVaccine(Vaccine vaccine) throws VaccineNotFoundException {
+	public Vaccine DeleteVaccine(Vaccine vaccine,String key) throws VaccineNotFoundException {
+		
+		 AdminLoginSession optAdminses= daoAdminLSes.findByUuid(key);
+
+	      
+	      if(optAdminses==null)
+	      {
+	    	   throw new LoginException("Unathrosied access denied..");
+	      }
 	             
 		    Optional<Vaccine> deletevaccine= daoVaccine.findById(vaccine.getVaccineId());
 		    
