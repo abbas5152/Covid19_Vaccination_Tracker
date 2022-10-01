@@ -51,5 +51,8 @@ public class VaccinationCenter {
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Inventory inventory;
 	
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "vaccinationCenter")
+	private List<Appointment> appointments;
 	
 }
