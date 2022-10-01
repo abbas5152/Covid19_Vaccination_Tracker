@@ -75,4 +75,70 @@ public class CustomerController {
 		
 		return new ResponseEntity<Member>(m,HttpStatus.CREATED);
 	}
+	
+	// vaccine Registration controler start --->
+	
+	
+	@Autowired
+	CustomerDao customerDao ;
+	
+	@PostMapping("customer")
+	public Customer saveCustomer(@RequestBody Customer customer) {
+		return customerDao.save(customer) ;
+	}
+	
+	// vaccine Registation controler ---->
+	
+	@Autowired
+    private VaccineRegistrationService registrationService;
+	
+	@Autowired
+	private LoginService loginservice;
+	
+	
+	
+	
+	@GetMapping("/Allregistrations")
+	     public ResponseEntity<List<VaccineRegistration>> getallRegistration() throws VaccineRegistrationException{
+	    	 
+	    	        List<VaccineRegistration> allreigs= registrationService.allVaccineRegistration();
+	    	        
+	    	        return new ResponseEntity<List<VaccineRegistration>>(allreigs, HttpStatus.OK);
+	    	        
+	     }
+	
+	@GetMapping("/member/{mobileNumber}")
+	 public ResponseEntity<List<Member>> getAllMemberByNu(@PathVariable("mobileNumber") String mobileNumber,@RequestParam String key) throws VaccineRegistrationException{
+		 
+		    return new ResponseEntity<List<Member>>(registrationService.getAllMember(mobileNumber, key),HttpStatus.OK);
+	 }
+	
+	
+	  @PostMapping("/registration")
+	   public ResponseEntity<VaccineRegistration> addRegistration( @RequestBody VaccineRegistration registration,@RequestParam String key) throws VaccineRegistrationException{
+		   
+		      return new ResponseEntity<VaccineRegistration>(registrationService.addVaccineRegistration(registration,key), HttpStatus.OK);
+	   }
+	  
+	  @GetMapping("/registrations/{mobileNumber}")
+	  public ResponseEntity<VaccineRegistration> getVaccineRegistration( @PathVariable("mobileNumber") String mobileNumber,@RequestParam String key) throws VaccineRegistrationException{
+		  
+		    return new ResponseEntity<VaccineRegistration>(registrationService.getVaccineRegistration(mobileNumber,key),HttpStatus.OK);
+	  }
+	  
+	  @PutMapping("/registration")
+	  public ResponseEntity<VaccineRegistration> UpdateRegistration( @RequestBody VaccineRegistration registration,@RequestParam String key) throws VaccineRegistrationException{
+		  
+		      return new ResponseEntity<VaccineRegistration>(registrationService.updateVaccineRegistration(registration,key),HttpStatus.OK);
+	  }
+	  
+	  @DeleteMapping("/registration")
+	  public boolean DeleteRegistraion( @RequestBody VaccineRegistration registration,@RequestParam String key) throws VaccineRegistrationException{
+		        
+		      boolean x=     registrationService.deleteVaccineRegistration(registration,key);
+		              
+		               
+		             return x;
+	  }
+	
 }
