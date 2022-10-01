@@ -34,7 +34,9 @@ import com.covid.service.VaccineInventoryService;
 public class AdminController {
 
 	@Autowired
-	AdminDao adminDao ;
+	AdminService adminDao ;
+        @Autowired
+	AppointmentService appointmentService ;
 	
 	@Autowired
 	private IdService idservice;
@@ -47,12 +49,75 @@ public class AdminController {
 	VaccineInventoryService vaccineInventoryService;
 	
 	@PostMapping("/")
-	public Admin saveAdmin(@RequestBody Admin admin) {
+	public ResponseEntity<Admin> saveAdmin(@RequestBody Admin admin) {
 		
-		return adminDao.save(admin) ;
+		Admin ad =  adminDao.registerAdmin(admin);
 		
+		return new ResponseEntity<Admin>(ad , HttpStatus.ACCEPTED) ;
 	}
 	
+	@PutMapping("/")
+	public ResponseEntity<Admin> UpdateAdmin(@RequestBody Admin admin) throws AdminException {
+		
+		Admin ad =  adminDao.updateAdmin(admin) ;
+		
+		return new ResponseEntity<Admin>(ad , HttpStatus.OK) ;
+	}
+	
+	@GetMapping("/{adminId}")
+	public ResponseEntity<Admin>  getAdminByAdminId(@PathVariable("adminId") Integer adminId ) throws AdminException {
+		
+		Admin ad = adminDao.getAdminById(adminId);
+		
+		return new ResponseEntity<Admin>(ad , HttpStatus.OK) ;
+	}
+	@DeleteMapping("/{adminId}")
+	public ResponseEntity<Admin> deleteAdminById(@PathVariable("adminId") Integer adminId ) throws AdminException {
+		
+		Admin ad =adminDao.deleteAdminById(adminId) ;
+		
+		return new ResponseEntity<Admin>(ad , HttpStatus.OK) ;
+	}
+	
+	
+	
+	@GetMapping("/allAppointments/{key}")
+	public ResponseEntity<List<Appointment>> getAllAppointments(@PathVariable("key") String key) throws AppointmentException {
+		
+		List<Appointment> app = appointmentService.getAllAppointment(key);
+		return new ResponseEntity<>(app,HttpStatus.ACCEPTED);
+	}
+	
+	@PostMapping("/addAppointment/{memberId}/{key}")
+	public ResponseEntity<Appointment> addAppointmentByMemberId(@RequestBody Appointment ap ,@PathVariable Integer memberId ,@PathVariable String key ) throws VaccineRegistrationException, MemberNotFoundException, AppointmentException {
+		
+		Appointment app = appointmentService.addAppointment(ap, memberId, key);
+		return new ResponseEntity<>(app,HttpStatus.ACCEPTED);
+	}
+	
+	@GetMapping("/getAppointment/{bookingId}/{key}")
+	public ResponseEntity<Appointment> getAppointment(@PathVariable("bookingId") long bookingId ,@PathVariable("key") String key) throws AppointmentException {
+		
+		Appointment app =  appointmentService.getAppointmentByBookingId(bookingId, key) ;
+		
+		return new ResponseEntity<>(app,HttpStatus.ACCEPTED);
+	}
+	
+	@PutMapping("/updateAppointment/{key}")
+	public ResponseEntity<Appointment> updateAppointment(@RequestBody Appointment app ,@PathVariable("key") String key ) throws AppointmentException{
+		
+		Appointment app2 = appointmentService.updateAppointment(app, key) ;
+		
+		return new ResponseEntity<>(app2,HttpStatus.ACCEPTED);
+	}
+	
+	@DeleteMapping("/deleteAppointment/{bookingId}/{key}")
+	public ResponseEntity<String> deleteAppointment(@PathVariable("bookingId") Long bookingId,@PathVariable("key")String key)throws AppointmentException{
+		
+		boolean ans = appointmentService.deleteAppointment(bookingId, key) ;
+		
+		 return new ResponseEntity<String>("Appointment Deleted succesfully", HttpStatus.GONE) ;
+	}
 
 	@GetMapping("/IdByAdhar/{AdharNo}")
 	public ResponseEntity<IdCard> FindByAdharHandler(@PathVariable Long AdharNo,@RequestParam String key) throws IdCardNotFoundException{
