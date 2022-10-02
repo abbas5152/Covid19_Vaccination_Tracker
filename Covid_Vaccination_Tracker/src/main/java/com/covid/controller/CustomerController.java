@@ -38,7 +38,10 @@ import com.covid.service.VaccineRegistrationService;
 public class CustomerController {
 
 	@Autowired
-	CustomerDao customerDao ;
+	CustomerService customerDao ;
+	
+	@Autowired
+	AppointmentService appointmentService ;
 	
 	@Autowired
 	private IdService idservice;
@@ -46,9 +49,40 @@ public class CustomerController {
 	@Autowired
 	private MemberService memberservice;
 	
-	@PostMapping("/save")
-	public Customer saveCustomer(@Valid @RequestBody Customer customer) {
-		return customerDao.save(customer) ;
+	@PostMapping("/")
+	public ResponseEntity<Customer> saveCustomer(@Valid @RequestBody Customer customer) {
+		
+		Customer cus =  customerDao.registerCustomer(customer) ;
+		return new ResponseEntity<Customer>(cus,HttpStatus.CREATED) ;
+	}
+	
+	@PutMapping("/")
+	public ResponseEntity<Customer> UpdateCustomer(@Valid @RequestBody Customer customer) throws CustomerException {
+		
+		Customer cus =  customerDao.updateCustomer(customer);
+		return new ResponseEntity<Customer>(cus,HttpStatus.OK) ;
+	}
+	
+	@GetMapping("/{customerId}")
+	public ResponseEntity<Customer> getCusotmerByAdminId(@PathVariable("cusotmerId") Integer customerId ) throws CustomerException {
+		
+		Customer cus =  customerDao.getCustomerById(customerId);
+		
+		return new ResponseEntity<Customer>(cus,HttpStatus.OK) ;
+	}
+	@DeleteMapping("/{customerId}")
+	public ResponseEntity<Customer> deleteCustomerById(@PathVariable("customerId") Integer customerId ) throws CustomerException {
+		
+		Customer cus =  customerDao.deleteCustomerById(customerId);
+		return new ResponseEntity<Customer>(cus,HttpStatus.OK) ;
+	}
+	
+	@GetMapping("/getAppointment/{bookingId}/{key}")
+	public ResponseEntity<Appointment> getAppointment(@PathVariable("bookingId") long bookingId ,@PathVariable("key") String key) throws AppointmentException {
+		
+		Appointment app =  appointmentService.getAppointmentByBookingId(bookingId, key) ;
+		
+		return new ResponseEntity<>(app,HttpStatus.ACCEPTED);
 	}
 	@PostMapping("/Id")
 	public ResponseEntity<IdCard> AddIdCardHandler(@Valid @RequestBody IdCard idcard,@RequestParam String key) throws IdCardNotRegisterException{
