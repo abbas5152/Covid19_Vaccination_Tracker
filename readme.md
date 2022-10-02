@@ -17,9 +17,10 @@
 
 ## Modules
 
-* Login, Logout Module
+* Login Module
 * User Module
 * Admin Module
+* Error Module
 
 ## Features
 
