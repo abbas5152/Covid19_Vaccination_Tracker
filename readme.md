@@ -78,7 +78,7 @@
 * `POST //api/customerLogin` : customer can login with mobile number and password provided at the time of registation
 * `DELETE //api/adminLogut` : Admin can logout using key
 * `DELETE //api/customerLogut` : customer can logout using key
-<!--
+
 ### User Module
 
 
