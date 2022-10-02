@@ -304,35 +304,35 @@ public class AdminController {
 	}
 	
 	
-	//vaccine center service control
+	vaccine center service control
 	
-//	
-//	@GetMapping("/vaccination_centers")
-//	public ResponseEntity<List<VaccinationCenter>> getVaccineCenters(@RequestParam String key) throws VaccineCenterException {
-//		return new ResponseEntity<List<VaccinationCenter>>(VaccinationCenterService.allVaccineCenters(key), HttpStatus.OK);
-//	}
-//
-//	@PostMapping("/vaccination_center")
-//	public ResponseEntity<VaccinationCenter> addVaccineCenter(@RequestBody VaccinationCenter center,@RequestParam String key) throws VaccineCenterException {
-//		return new ResponseEntity<VaccinationCenter>(VaccinationCenterService.addVaccineCenter(center,key),
-//				HttpStatus.CREATED);
-//	}
-//
-//	@GetMapping("/vaccination_center/{id}")
-//	public ResponseEntity<VaccinationCenter> addVaccineCenter(@PathVariable("id") Integer id,@RequestParam String key) {
-//		return new ResponseEntity<VaccinationCenter>(VaccinationCenterService.getVaccineCenter(id,key), HttpStatus.FOUND);
-//	}
-//
-//	@PutMapping("/vaccination_center")
-//	public ResponseEntity<VaccinationCenter> updateVaccineCenter(@RequestBody VaccinationCenter center,@RequestParam String key) {
-//		return new ResponseEntity<VaccinationCenter>(VaccinationCenterService.updateVaccineCenter(center,key),
-//				HttpStatus.OK);
-//	}
-//
-//	@DeleteMapping("/vaccination_center")
-//	public ResponseEntity<String> deleteVaccineCenter(@RequestBody VaccinationCenter center,@RequestParam String key) {
-//		return new ResponseEntity<>("vaccine center deleted : " + VaccinationCenterService.deleteVaccineCenter(center,key),
-//				HttpStatus.OK);
-//	}
+	
+	@GetMapping("/vaccination_centers")
+	public ResponseEntity<List<VaccinationCenter>> getVaccineCenters(@RequestParam String key) throws VaccineCenterException {
+		return new ResponseEntity<List<VaccinationCenter>>(VaccinationCenterService.allVaccineCenters(key), HttpStatus.OK);
+	}
+
+	@PostMapping("/vaccination_center")
+	public ResponseEntity<VaccinationCenter> addVaccineCenter(@RequestBody VaccinationCenter center,@RequestParam String key) throws VaccineCenterException {
+		return new ResponseEntity<VaccinationCenter>(VaccinationCenterService.addVaccineCenter(center,key),
+				HttpStatus.CREATED);
+	}
+
+	@GetMapping("/vaccination_center/{id}")
+	public ResponseEntity<VaccinationCenter> addVaccineCenter(@PathVariable("id") Integer id,@RequestParam String key) {
+		return new ResponseEntity<VaccinationCenter>(VaccinationCenterService.getVaccineCenter(id,key), HttpStatus.FOUND);
+	}
+
+	@PutMapping("/vaccination_center")
+	public ResponseEntity<VaccinationCenter> updateVaccineCenter(@RequestBody VaccinationCenter center,@RequestParam String key) {
+		return new ResponseEntity<VaccinationCenter>(VaccinationCenterService.updateVaccineCenter(center,key),
+				HttpStatus.OK);
+	}
+
+	@DeleteMapping("/vaccination_center")
+	public ResponseEntity<String> deleteVaccineCenter(@RequestBody VaccinationCenter center,@RequestParam String key) {
+		return new ResponseEntity<>("vaccine center deleted : " + VaccinationCenterService.deleteVaccineCenter(center,key),
+				HttpStatus.OK);
+	}
 
 }
