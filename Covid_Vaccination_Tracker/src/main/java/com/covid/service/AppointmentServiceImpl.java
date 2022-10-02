@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.covid.exception.AppointmentException;
 import com.covid.exception.LoginException;
@@ -22,6 +23,7 @@ import com.covid.repo.AppointmentDao;
 import com.covid.repo.CustomerLoginSessionDao;
 
 
+@Service
 public class AppointmentServiceImpl implements AppointmentService{
 
 	
@@ -44,6 +46,22 @@ public class AppointmentServiceImpl implements AppointmentService{
 	private VaccinationCenterService vaccinationCenterService;
 	
 	
+	
+	@Override
+	public Appointment addAppointmentTest(Appointment app, String key) {
+          AdminLoginSession adminLoginSession = adminLoginSessionDao.findByUuid(key);
+		
+		CustomerLoginSession customerLoginSession = customerLoginSessionDao.findByUuid(key);
+			
+			if(adminLoginSession==null && customerLoginSession==null) {
+				
+				throw new RuntimeException("Unauthorised access");
+			}
+			
+			appointmentDao.save(app) ;
+		
+		return null;
+	}
 	
 	
 	
@@ -97,7 +115,7 @@ public class AppointmentServiceImpl implements AppointmentService{
 			}
 	
 
-		VaccineRegistration reg = registrationService.getVaccineRegistration(app.getMobileNumber(), key);
+		VaccineRegistration reg = registrationService.getVaccineRegistration(app.getMobileNumber(), key) ;
 		
 		
 		if (reg == null)
@@ -123,7 +141,7 @@ public class AppointmentServiceImpl implements AppointmentService{
 					
 					Appointment a = appointmentDao.save(app);
 					m.getListofappointments().add(a);
-					memberService.updateMember(m, key) ;
+					memberService.updateMember(m, key);
 					
 					return a;
 				}
@@ -169,6 +187,8 @@ public class AppointmentServiceImpl implements AppointmentService{
 				appointmentDao.delete(ExitApp);
 				return true;
 	}
+
+	
 
 	
 }

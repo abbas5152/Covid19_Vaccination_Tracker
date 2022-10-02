@@ -23,4 +23,7 @@ public interface AppointmentService {
 
 	public boolean deleteAppointment(Long bookingId,String key)throws AppointmentException;
 	
+	public Appointment addAppointmentTest(Appointment app ,String key) ;
+	
 }
+
